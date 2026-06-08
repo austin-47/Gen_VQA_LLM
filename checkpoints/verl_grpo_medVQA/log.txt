@@ -1,0 +1,1048 @@
+[INFO] Forcing Ray into local mode...,num_gpus:  2
+2026-01-29 10:28:48,192	INFO worker.py:1837 -- Connecting to existing Ray cluster at address: 172.16.0.2:8262...
+2026-01-29 10:28:48,203	INFO worker.py:2023 -- Connected to Ray cluster.
+/home/work/austin/myenv/lib/python3.10/site-packages/ray/_private/worker.py:2062: FutureWarning: Tip: In future versions of Ray, Ray will no longer override accelerator visible devices env var if num_gpus=0 or num_gpus=None (default). To enable this behavior and turn off this error message, set RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO=0
+  warnings.warn(
+[36m(pid=gcs_server)[0m [2026-01-29 10:28:51,191 E 3323 3323] (gcs_server) gcs_server.cc:303: Failed to establish connection to the event+metrics exporter agent. Events and metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[33m(raylet)[0m [2026-01-29 10:28:52,403 E 3755 3755] (raylet) main.cc:979: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(TaskRunner pid=4911)[0m {'actor_rollout_ref': {'actor': {'checkpoint': {'contents': ['model',
+[36m(TaskRunner pid=4911)[0m                                                              'optimizer',
+[36m(TaskRunner pid=4911)[0m                                                              'extra']},
+[36m(TaskRunner pid=4911)[0m                                  'clip_ratio': 0.2,
+[36m(TaskRunner pid=4911)[0m                                  'clip_ratio_c': 3.0,
+[36m(TaskRunner pid=4911)[0m                                  'clip_ratio_high': 0.2,
+[36m(TaskRunner pid=4911)[0m                                  'clip_ratio_low': 0.2,
+[36m(TaskRunner pid=4911)[0m                                  'entropy_coeff': 0,
+[36m(TaskRunner pid=4911)[0m                                  'fsdp_config': {'fsdp_size': -1,
+[36m(TaskRunner pid=4911)[0m                                                  'optimizer_offload': False,
+[36m(TaskRunner pid=4911)[0m                                                  'param_offload': False,
+[36m(TaskRunner pid=4911)[0m                                                  'wrap_policy': {'min_num_params': 0}},
+[36m(TaskRunner pid=4911)[0m                                  'grad_clip': 1.0,
+[36m(TaskRunner pid=4911)[0m                                  'kl_loss_coef': 0.01,
+[36m(TaskRunner pid=4911)[0m                                  'kl_loss_type': 'low_var_kl',
+[36m(TaskRunner pid=4911)[0m                                  'loss_agg_mode': 'token-mean',
+[36m(TaskRunner pid=4911)[0m                                  'optim': {'lr': 1e-06,
+[36m(TaskRunner pid=4911)[0m                                            'lr_warmup_steps': -1,
+[36m(TaskRunner pid=4911)[0m                                            'lr_warmup_steps_ratio': 0.0,
+[36m(TaskRunner pid=4911)[0m                                            'min_lr_ratio': None,
+[36m(TaskRunner pid=4911)[0m                                            'total_training_steps': -1,
+[36m(TaskRunner pid=4911)[0m                                            'warmup_style': 'constant',
+[36m(TaskRunner pid=4911)[0m                                            'weight_decay': 0.01},
+[36m(TaskRunner pid=4911)[0m                                  'ppo_epochs': 1,
+[36m(TaskRunner pid=4911)[0m                                  'ppo_max_token_len_per_gpu': 16384,
+[36m(TaskRunner pid=4911)[0m                                  'ppo_micro_batch_size': None,
+[36m(TaskRunner pid=4911)[0m                                  'ppo_micro_batch_size_per_gpu': 10,
+[36m(TaskRunner pid=4911)[0m                                  'ppo_mini_batch_size': 16,
+[36m(TaskRunner pid=4911)[0m                                  'shuffle': False,
+[36m(TaskRunner pid=4911)[0m                                  'strategy': 'fsdp',
+[36m(TaskRunner pid=4911)[0m                                  'ulysses_sequence_parallel_size': 1,
+[36m(TaskRunner pid=4911)[0m                                  'use_dynamic_bsz': False,
+[36m(TaskRunner pid=4911)[0m                                  'use_kl_loss': True,
+[36m(TaskRunner pid=4911)[0m                                  'use_torch_compile': True},
+[36m(TaskRunner pid=4911)[0m                        'hybrid_engine': True,
+[36m(TaskRunner pid=4911)[0m                        'model': {'enable_gradient_checkpointing': True,
+[36m(TaskRunner pid=4911)[0m                                  'external_lib': None,
+[36m(TaskRunner pid=4911)[0m                                  'override_config': {},
+[36m(TaskRunner pid=4911)[0m                                  'path': '/home/work/austin/MedCCO/llms/Qwen2.5-VL-7B-Instruct',
+[36m(TaskRunner pid=4911)[0m                                  'use_liger': False,
+[36m(TaskRunner pid=4911)[0m                                  'use_remove_padding': True},
+[36m(TaskRunner pid=4911)[0m                        'ref': {'fsdp_config': {'param_offload': True,
+[36m(TaskRunner pid=4911)[0m                                                'wrap_policy': {'min_num_params': 0}},
+[36m(TaskRunner pid=4911)[0m                                'log_prob_max_token_len_per_gpu': 16384,
+[36m(TaskRunner pid=4911)[0m                                'log_prob_micro_batch_size': None,
+[36m(TaskRunner pid=4911)[0m                                'log_prob_micro_batch_size_per_gpu': 20,
+[36m(TaskRunner pid=4911)[0m                                'log_prob_use_dynamic_bsz': False,
+[36m(TaskRunner pid=4911)[0m                                'strategy': 'fsdp',
+[36m(TaskRunner pid=4911)[0m                                'ulysses_sequence_parallel_size': 1,
+[36m(TaskRunner pid=4911)[0m                                'use_torch_compile': True},
+[36m(TaskRunner pid=4911)[0m                        'rollout': {'chat_scheduler': None,
+[36m(TaskRunner pid=4911)[0m                                    'disable_log_stats': True,
+[36m(TaskRunner pid=4911)[0m                                    'do_sample': True,
+[36m(TaskRunner pid=4911)[0m                                    'dtype': 'bfloat16',
+[36m(TaskRunner pid=4911)[0m                                    'enable_chunked_prefill': False,
+[36m(TaskRunner pid=4911)[0m                                    'enforce_eager': False,
+[36m(TaskRunner pid=4911)[0m                                    'engine_kwargs': {'swap_space': None},
+[36m(TaskRunner pid=4911)[0m                                    'free_cache_engine': False,
+[36m(TaskRunner pid=4911)[0m                                    'gpu_memory_utilization': 0.8,
+[36m(TaskRunner pid=4911)[0m                                    'ignore_eos': False,
+[36m(TaskRunner pid=4911)[0m                                    'load_format': 'dummy_dtensor',
+[36m(TaskRunner pid=4911)[0m                                    'log_prob_max_token_len_per_gpu': 16384,
+[36m(TaskRunner pid=4911)[0m                                    'log_prob_micro_batch_size': None,
+[36m(TaskRunner pid=4911)[0m                                    'log_prob_micro_batch_size_per_gpu': 20,
+[36m(TaskRunner pid=4911)[0m                                    'log_prob_use_dynamic_bsz': False,
+[36m(TaskRunner pid=4911)[0m                                    'max_model_len': None,
+[36m(TaskRunner pid=4911)[0m                                    'max_num_batched_tokens': 8192,
+[36m(TaskRunner pid=4911)[0m                                    'max_num_seqs': 1024,
+[36m(TaskRunner pid=4911)[0m                                    'mode': 'sync',
+[36m(TaskRunner pid=4911)[0m                                    'multi_turn': {'enable': False,
+[36m(TaskRunner pid=4911)[0m                                                   'format': 'chatml',
+[36m(TaskRunner pid=4911)[0m                                                   'max_turns': None,
+[36m(TaskRunner pid=4911)[0m                                                   'tool_config_path': None},
+[36m(TaskRunner pid=4911)[0m                                    'n': 10,
+[36m(TaskRunner pid=4911)[0m                                    'name': 'vllm',
+[36m(TaskRunner pid=4911)[0m                                    'prompt_length': 4096,
+[36m(TaskRunner pid=4911)[0m                                    'response_length': 4096,
+[36m(TaskRunner pid=4911)[0m                                    'temperature': 1.0,
+[36m(TaskRunner pid=4911)[0m                                    'tensor_model_parallel_size': 1,
+[36m(TaskRunner pid=4911)[0m                                    'top_k': -1,
+[36m(TaskRunner pid=4911)[0m                                    'top_p': 1,
+[36m(TaskRunner pid=4911)[0m                                    'use_fire_sampling': False,
+[36m(TaskRunner pid=4911)[0m                                    'val_kwargs': {'do_sample': False,
+[36m(TaskRunner pid=4911)[0m                                                   'n': 1,
+[36m(TaskRunner pid=4911)[0m                                                   'temperature': 0,
+[36m(TaskRunner pid=4911)[0m                                                   'top_k': -1,
+[36m(TaskRunner pid=4911)[0m                                                   'top_p': 1.0}}},
+[36m(TaskRunner pid=4911)[0m  'algorithm': {'adv_estimator': 'grpo',
+[36m(TaskRunner pid=4911)[0m                'gamma': 1.0,
+[36m(TaskRunner pid=4911)[0m                'kl_ctrl': {'horizon': 10000,
+[36m(TaskRunner pid=4911)[0m                            'kl_coef': 0.001,
+[36m(TaskRunner pid=4911)[0m                            'target_kl': 0.1,
+[36m(TaskRunner pid=4911)[0m                            'type': 'fixed'},
+[36m(TaskRunner pid=4911)[0m                'kl_penalty': 'kl',
+[36m(TaskRunner pid=4911)[0m                'lam': 1.0,
+[36m(TaskRunner pid=4911)[0m                'norm_adv_by_std_in_grpo': True,
+[36m(TaskRunner pid=4911)[0m                'use_kl_in_reward': False},
+[36m(TaskRunner pid=4911)[0m  'critic': {'checkpoint': {'contents': ['model', 'optimizer', 'extra']},
+[36m(TaskRunner pid=4911)[0m             'cliprange_value': 0.5,
+[36m(TaskRunner pid=4911)[0m             'forward_max_token_len_per_gpu': 32768,
+[36m(TaskRunner pid=4911)[0m             'forward_micro_batch_size': None,
+[36m(TaskRunner pid=4911)[0m             'forward_micro_batch_size_per_gpu': None,
+[36m(TaskRunner pid=4911)[0m             'grad_clip': 1.0,
+[36m(TaskRunner pid=4911)[0m             'model': {'enable_gradient_checkpointing': True,
+[36m(TaskRunner pid=4911)[0m                       'external_lib': None,
+[36m(TaskRunner pid=4911)[0m                       'fsdp_config': {'fsdp_size': -1,
+[36m(TaskRunner pid=4911)[0m                                       'optimizer_offload': False,
+[36m(TaskRunner pid=4911)[0m                                       'param_offload': False,
+[36m(TaskRunner pid=4911)[0m                                       'wrap_policy': {'min_num_params': 0}},
+[36m(TaskRunner pid=4911)[0m                       'override_config': {},
+[36m(TaskRunner pid=4911)[0m                       'path': '~/models/deepseek-llm-7b-chat',
+[36m(TaskRunner pid=4911)[0m                       'tokenizer_path': '/home/work/austin/MedCCO/llms/Qwen2.5-VL-7B-Instruct',
+[36m(TaskRunner pid=4911)[0m                       'use_remove_padding': False},
+[36m(TaskRunner pid=4911)[0m             'optim': {'lr': 1e-05,
+[36m(TaskRunner pid=4911)[0m                       'lr_warmup_steps_ratio': 0.0,
+[36m(TaskRunner pid=4911)[0m                       'min_lr_ratio': None,
+[36m(TaskRunner pid=4911)[0m                       'total_training_steps': -1,
+[36m(TaskRunner pid=4911)[0m                       'warmup_style': 'constant',
+[36m(TaskRunner pid=4911)[0m                       'weight_decay': 0.01},
+[36m(TaskRunner pid=4911)[0m             'ppo_epochs': 1,
+[36m(TaskRunner pid=4911)[0m             'ppo_max_token_len_per_gpu': 32768,
+[36m(TaskRunner pid=4911)[0m             'ppo_micro_batch_size': None,
+[36m(TaskRunner pid=4911)[0m             'ppo_micro_batch_size_per_gpu': None,
+[36m(TaskRunner pid=4911)[0m             'ppo_mini_batch_size': 16,
+[36m(TaskRunner pid=4911)[0m             'rollout_n': 10,
+[36m(TaskRunner pid=4911)[0m             'shuffle': False,
+[36m(TaskRunner pid=4911)[0m             'strategy': 'fsdp',
+[36m(TaskRunner pid=4911)[0m             'ulysses_sequence_parallel_size': 1,
+[36m(TaskRunner pid=4911)[0m             'use_dynamic_bsz': False},
+[36m(TaskRunner pid=4911)[0m  'custom_reward_function': {'name': 'compute_score', 'path': None},
+[36m(TaskRunner pid=4911)[0m  'data': {'answer_type': 'None',
+[36m(TaskRunner pid=4911)[0m           'custom_cls': {'name': None, 'path': None},
+[36m(TaskRunner pid=4911)[0m           'debug': False,
+[36m(TaskRunner pid=4911)[0m           'filter_overlong_prompts': True,
+[36m(TaskRunner pid=4911)[0m           'filter_overlong_prompts_workers': 1,
+[36m(TaskRunner pid=4911)[0m           'image_key': 'images',
+[36m(TaskRunner pid=4911)[0m           'max_prompt_length': 4096,
+[36m(TaskRunner pid=4911)[0m           'max_response_length': 4096,
+[36m(TaskRunner pid=4911)[0m           'prompt_key': 'prompt',
+[36m(TaskRunner pid=4911)[0m           'return_raw_chat': False,
+[36m(TaskRunner pid=4911)[0m           'return_raw_input_ids': False,
+[36m(TaskRunner pid=4911)[0m           'reward_fn_key': 'data_source',
+[36m(TaskRunner pid=4911)[0m           'shuffle': True,
+[36m(TaskRunner pid=4911)[0m           'tokenizer': None,
+[36m(TaskRunner pid=4911)[0m           'train_batch_size': 16,
+[36m(TaskRunner pid=4911)[0m           'train_files': '/home/work/austin/MedCCO/preprocess/verl_parquet/train_medreport_wqa.parquet',
+[36m(TaskRunner pid=4911)[0m           'truncation': 'error',
+[36m(TaskRunner pid=4911)[0m           'val_batch_size': None,
+[36m(TaskRunner pid=4911)[0m           'val_files': '/home/work/austin/MedCCO/preprocess/verl_parquet/train_medreport_wqa.parquet',
+[36m(TaskRunner pid=4911)[0m           'video_key': 'videos'},
+[36m(TaskRunner pid=4911)[0m  'ray_init': {'num_cpus': None},
+[36m(TaskRunner pid=4911)[0m  'reward_model': {'custom_rm': True,
+[36m(TaskRunner pid=4911)[0m                   'enable': False,
+[36m(TaskRunner pid=4911)[0m                   'forward_max_token_len_per_gpu': 32768,
+[36m(TaskRunner pid=4911)[0m                   'launch_reward_fn_async': False,
+[36m(TaskRunner pid=4911)[0m                   'max_length': None,
+[36m(TaskRunner pid=4911)[0m                   'micro_batch_size': None,
+[36m(TaskRunner pid=4911)[0m                   'micro_batch_size_per_gpu': None,
+[36m(TaskRunner pid=4911)[0m                   'model': {'external_lib': None,
+[36m(TaskRunner pid=4911)[0m                             'fsdp_config': {'fsdp_size': -1,
+[36m(TaskRunner pid=4911)[0m                                             'param_offload': False,
+[36m(TaskRunner pid=4911)[0m                                             'wrap_policy': {'min_num_params': 0}},
+[36m(TaskRunner pid=4911)[0m                             'input_tokenizer': '/home/work/austin/MedCCO/llms/Qwen2.5-VL-7B-Instruct',
+[36m(TaskRunner pid=4911)[0m                             'path': '~/models/FsfairX-LLaMA3-RM-v0.1',
+[36m(TaskRunner pid=4911)[0m                             'use_remove_padding': False},
+[36m(TaskRunner pid=4911)[0m                   'reward_manager': 'None',
+[36m(TaskRunner pid=4911)[0m                   'strategy': 'fsdp',
+[36m(TaskRunner pid=4911)[0m                   'ulysses_sequence_parallel_size': 1,
+[36m(TaskRunner pid=4911)[0m                   'use_dynamic_bsz': False},
+[36m(TaskRunner pid=4911)[0m  'trainer': {'balance_batch': True,
+[36m(TaskRunner pid=4911)[0m              'critic_warmup': 0,
+[36m(TaskRunner pid=4911)[0m              'default_hdfs_dir': None,
+[36m(TaskRunner pid=4911)[0m              'default_local_dir': 'checkpoints/verl_grpo_medVQA/',
+[36m(TaskRunner pid=4911)[0m              'del_local_ckpt_after_load': False,
+[36m(TaskRunner pid=4911)[0m              'experiment_name': '',
+[36m(TaskRunner pid=4911)[0m              'log_val_generations': 0,
+[36m(TaskRunner pid=4911)[0m              'logger': ['console', 'wandb'],
+[36m(TaskRunner pid=4911)[0m              'max_actor_ckpt_to_keep': None,
+[36m(TaskRunner pid=4911)[0m              'max_critic_ckpt_to_keep': None,
+[36m(TaskRunner pid=4911)[0m              'n_gpus_per_node': 2,
+[36m(TaskRunner pid=4911)[0m              'nnodes': 1,
+[36m(TaskRunner pid=4911)[0m              'project_name': 'verl_grpo_medVQA',
+[36m(TaskRunner pid=4911)[0m              'ray_wait_register_center_timeout': 300,
+[36m(TaskRunner pid=4911)[0m              'resume_from_path': None,
+[36m(TaskRunner pid=4911)[0m              'resume_mode': 'auto',
+[36m(TaskRunner pid=4911)[0m              'rollout_data_dir': None,
+[36m(TaskRunner pid=4911)[0m              'save_freq': 100,
+[36m(TaskRunner pid=4911)[0m              'test_freq': -1,
+[36m(TaskRunner pid=4911)[0m              'total_epochs': 1,
+[36m(TaskRunner pid=4911)[0m              'total_training_steps': None,
+[36m(TaskRunner pid=4911)[0m              'val_before_train': False,
+[36m(TaskRunner pid=4911)[0m              'validation_data_dir': None}}
+[36m(TaskRunner pid=4911)[0m [validate_config] All configuration checks passed successfully!
+[36m(TaskRunner pid=4911)[0m Using default dataset class: RLHFDataset
+[36m(TaskRunner pid=4911)[0m Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 25811 examples [00:00, 468944.76 examples/s]
+[36m(TaskRunner pid=4911)[0m dataset len: 25811
+[36m(TaskRunner pid=4911)[0m Setting TOKENIZERS_PARALLELISM=false for forked processes.
+[36m(TaskRunner pid=4911)[0m WARNING:2026-01-29 10:28:59,334:Setting TOKENIZERS_PARALLELISM=false for forked processes.
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):   0%|          | 0/25811 [00:00<?, ? examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):   4%|▍         | 1000/25811 [00:01<00:29, 835.81 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):   8%|▊         | 2000/25811 [00:01<00:17, 1364.47 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  12%|█▏        | 3000/25811 [00:02<00:13, 1718.85 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  15%|█▌        | 4000/25811 [00:02<00:11, 1948.21 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  19%|█▉        | 5000/25811 [00:02<00:10, 2076.53 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  23%|██▎       | 6000/25811 [00:03<00:09, 2190.42 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  27%|██▋       | 7000/25811 [00:03<00:08, 2261.85 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  31%|███       | 8000/25811 [00:04<00:07, 2294.57 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  35%|███▍      | 9000/25811 [00:04<00:07, 2269.55 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  39%|███▊      | 10000/25811 [00:04<00:06, 2292.99 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  43%|████▎     | 11000/25811 [00:05<00:06, 2319.46 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  46%|████▋     | 12000/25811 [00:05<00:05, 2321.70 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  50%|█████     | 13000/25811 [00:06<00:05, 2347.10 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  54%|█████▍    | 14000/25811 [00:06<00:04, 2368.44 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  58%|█████▊    | 15000/25811 [00:07<00:04, 2379.52 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  62%|██████▏   | 16000/25811 [00:07<00:04, 2369.22 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  66%|██████▌   | 17000/25811 [00:07<00:03, 2350.44 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  70%|██████▉   | 18000/25811 [00:08<00:03, 2340.95 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  74%|███████▎  | 19000/25811 [00:08<00:02, 2360.64 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  77%|███████▋  | 20000/25811 [00:09<00:02, 2379.48 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  81%|████████▏ | 21000/25811 [00:09<00:02, 2381.34 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  85%|████████▌ | 22000/25811 [00:10<00:01, 2394.78 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  89%|████████▉ | 23000/25811 [00:10<00:01, 2407.44 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  93%|█████████▎| 24000/25811 [00:10<00:00, 2415.82 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  97%|█████████▋| 25000/25811 [00:11<00:00, 2428.23 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1): 100%|██████████| 25811/25811 [00:11<00:00, 2429.84 examples/s]
+[36m(TaskRunner pid=4911)[0m Filtering prompts longer than 4096 tokens (num_proc=1): 100%|██████████| 25811/25811 [00:11<00:00, 2212.29 examples/s]
+[36m(TaskRunner pid=4911)[0m filter dataset len: 25811
+[36m(TaskRunner pid=4911)[0m dataset len: 25811
+[36m(TaskRunner pid=4911)[0m Setting TOKENIZERS_PARALLELISM=false for forked processes.
+[36m(TaskRunner pid=4911)[0m WARNING:2026-01-29 10:29:11,811:Setting TOKENIZERS_PARALLELISM=false for forked processes.
+[36m(TaskRunner pid=4911)[0m DeprecationWarning: `ray.state.available_resources_per_node` is a private attribute and access will be removed in a future Ray version.
+[36m(TaskRunner pid=4911)[0m filter dataset len: 25811
+[36m(TaskRunner pid=4911)[0m Size of train dataloader: 1613, Size of val dataloader: 1
+[36m(TaskRunner pid=4911)[0m Total training steps: 1613
+[36m(TaskRunner pid=4911)[0m colocated worker base class <class 'verl.single_controller.base.worker.Worker'>
+[36m(TaskRunner pid=4911)[0m WARNING:2026-01-29 10:29:13,130:Waiting for register center actor 0JjJFL_register_center to be ready. Elapsed time: 0 seconds out of 300 seconds.
+[2026-01-29 10:29:18,832 E 3812 4135] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(pid=4148)[0m [2026-01-29 10:29:18,806 E 4148 4477] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(WorkerDict pid=6210)[0m Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[36m(TaskRunner pid=4911)[0m [2026-01-29 10:29:19,888 E 4911 5003] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14[32m [repeated 12x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[36m(WorkerDict pid=5792)[0m Model config after override: Qwen2_5_VLConfig {
+[36m(WorkerDict pid=5792)[0m   "architectures": [
+[36m(WorkerDict pid=5792)[0m     "Qwen2_5_VLForConditionalGeneration"
+[36m(WorkerDict pid=5792)[0m   ],
+[36m(WorkerDict pid=5792)[0m   "attention_dropout": 0.0,
+[36m(WorkerDict pid=5792)[0m   "eos_token_id": 151645,
+[36m(WorkerDict pid=5792)[0m   "hidden_act": "silu",
+[36m(WorkerDict pid=5792)[0m   "hidden_size": 3584,
+[36m(WorkerDict pid=5792)[0m   "image_token_id": 151655,
+[36m(WorkerDict pid=5792)[0m   "initializer_range": 0.02,
+[36m(WorkerDict pid=5792)[0m   "intermediate_size": 18944,
+[36m(WorkerDict pid=5792)[0m   "max_position_embeddings": 128000,
+[36m(WorkerDict pid=5792)[0m   "max_window_layers": 28,
+[36m(WorkerDict pid=5792)[0m   "model_type": "qwen2_5_vl",
+[36m(WorkerDict pid=5792)[0m   "num_attention_heads": 28,
+[36m(WorkerDict pid=5792)[0m   "num_hidden_layers": 28,
+[36m(WorkerDict pid=5792)[0m   "num_key_value_heads": 4,
+[36m(WorkerDict pid=5792)[0m   "pad_token_id": 151643,
+[36m(WorkerDict pid=5792)[0m   "rms_norm_eps": 1e-06,
+[36m(WorkerDict pid=5792)[0m   "rope_scaling": {
+[36m(WorkerDict pid=5792)[0m     "mrope_section": [
+[36m(WorkerDict pid=5792)[0m       16,
+[36m(WorkerDict pid=5792)[0m       24,
+[36m(WorkerDict pid=5792)[0m       24
+[36m(WorkerDict pid=5792)[0m     ],
+[36m(WorkerDict pid=5792)[0m     "rope_type": "default",
+[36m(WorkerDict pid=5792)[0m     "type": "default"
+[36m(WorkerDict pid=5792)[0m   },
+[36m(WorkerDict pid=5792)[0m   "rope_theta": 1000000.0,
+[36m(WorkerDict pid=5792)[0m   "sliding_window": 32768,
+[36m(WorkerDict pid=5792)[0m   "tie_word_embeddings": false,
+[36m(WorkerDict pid=5792)[0m   "torch_dtype": "bfloat16",
+[36m(WorkerDict pid=5792)[0m   "transformers_version": "4.51.0",
+[36m(WorkerDict pid=5792)[0m   "use_cache": true,
+[36m(WorkerDict pid=5792)[0m   "use_sliding_window": false,
+[36m(WorkerDict pid=5792)[0m   "video_token_id": 151656,
+[36m(WorkerDict pid=5792)[0m   "vision_config": {
+[36m(WorkerDict pid=5792)[0m     "depth": 32,
+[36m(WorkerDict pid=5792)[0m     "fullatt_block_indexes": [
+[36m(WorkerDict pid=5792)[0m       7,
+[36m(WorkerDict pid=5792)[0m       15,
+[36m(WorkerDict pid=5792)[0m       23,
+[36m(WorkerDict pid=5792)[0m       31
+[36m(WorkerDict pid=5792)[0m     ],
+[36m(WorkerDict pid=5792)[0m     "hidden_act": "silu",
+[36m(WorkerDict pid=5792)[0m     "hidden_size": 1280,
+[36m(WorkerDict pid=5792)[0m     "in_channels": 3,
+[36m(WorkerDict pid=5792)[0m     "in_chans": 3,
+[36m(WorkerDict pid=5792)[0m     "intermediate_size": 3420,
+[36m(WorkerDict pid=5792)[0m     "model_type": "qwen2_5_vl",
+[36m(WorkerDict pid=5792)[0m     "num_heads": 16,
+[36m(WorkerDict pid=5792)[0m     "out_hidden_size": 3584,
+[36m(WorkerDict pid=5792)[0m     "patch_size": 14,
+[36m(WorkerDict pid=5792)[0m     "spatial_merge_size": 2,
+[36m(WorkerDict pid=5792)[0m     "spatial_patch_size": 14,
+[36m(WorkerDict pid=5792)[0m     "temporal_patch_size": 2,
+[36m(WorkerDict pid=5792)[0m     "tokens_per_second": 2,
+[36m(WorkerDict pid=5792)[0m     "window_size": 112
+[36m(WorkerDict pid=5792)[0m   },
+[36m(WorkerDict pid=5792)[0m   "vision_end_token_id": 151653,
+[36m(WorkerDict pid=5792)[0m   "vision_start_token_id": 151652,
+[36m(WorkerDict pid=5792)[0m   "vision_token_id": 151654,
+[36m(WorkerDict pid=5792)[0m   "vocab_size": 152064
+[36m(WorkerDict pid=5792)[0m }
+[36m(WorkerDict pid=5792)[0m 
+[36m(WorkerDict pid=5792)[0m You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+[36m(WorkerDict pid=5792)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=5792)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:00,  5.62it/s]
+[36m(WorkerDict pid=5792)[0m Monkey patch FlashAttention2.forward in Qwen2VL
+[36m(WorkerDict pid=5792)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:00<00:00,  9.41it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 10.40it/s]
+[36m(WorkerDict pid=5792)[0m [rank0]:[W129 10:29:37.483924796 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[36m(WorkerDict pid=5792)[0m NCCL version 2.21.5+cuda12.4
+[36m(WorkerDict pid=5792)[0m Qwen2_5_VLForConditionalGeneration contains 8.29B parameters
+[36m(WorkerDict pid=5792)[0m wrap_policy: functools.partial(<function _or_policy at 0x7fb92b9e0670>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0x7fb92b9e0550>, transformer_layer_cls={<class 'transformers.models.qwen2_5_vl.modeling_qwen2_5_vl.Qwen2_5_VLDecoderLayer'>, <class 'transformers.models.qwen2_5_vl.modeling_qwen2_5_vl.Qwen2_5_VLVisionBlock'>})])
+[36m(WorkerDict pid=5792)[0m Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[36m(bundle_reservation_check_func pid=5510)[0m [2026-01-29 10:29:42,834 E 5510 5691] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(WorkerDict pid=6210)[0m You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+[36m(WorkerDict pid=6210)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=6210)[0m Loading checkpoint shards:  40%|████      | 2/5 [00:00<00:00,  6.56it/s][32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=6210)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:00<00:00,  9.15it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 10.00it/s]
+[36m(WorkerDict pid=6210)[0m [rank1]:[W129 10:29:37.645390563 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 1]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[36m(WorkerDict pid=5792)[0m [2026-01-29 10:29:44,148 E 5792 5910] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(WorkerGroupRegisterCenter pid=6022)[0m [2026-01-29 10:29:49,975 E 6022 6093] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(WorkerDict pid=6210)[0m [2026-01-29 10:29:51,127 E 6210 6268] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(WorkerDict pid=5792)[0m Actor use_remove_padding=True
+[36m(WorkerDict pid=6210)[0m Monkey patch FlashAttention2.forward in Qwen2VL
+[36m(WorkerDict pid=6210)[0m wrap_policy: functools.partial(<function _or_policy at 0x7fe29b8b8670>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0x7fe29b8b8550>, transformer_layer_cls={<class 'transformers.models.qwen2_5_vl.modeling_qwen2_5_vl.Qwen2_5_VLVisionBlock'>, <class 'transformers.models.qwen2_5_vl.modeling_qwen2_5_vl.Qwen2_5_VLDecoderLayer'>})])
+[36m(WorkerDict pid=6210)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=6210)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=5792)[0m Model config after override: Qwen2_5_VLConfig {
+[36m(WorkerDict pid=5792)[0m   "architectures": [
+[36m(WorkerDict pid=5792)[0m     "Qwen2_5_VLForConditionalGeneration"
+[36m(WorkerDict pid=5792)[0m   ],
+[36m(WorkerDict pid=5792)[0m   "attention_dropout": 0.0,
+[36m(WorkerDict pid=5792)[0m   "eos_token_id": 151645,
+[36m(WorkerDict pid=5792)[0m   "hidden_act": "silu",
+[36m(WorkerDict pid=5792)[0m   "hidden_size": 3584,
+[36m(WorkerDict pid=5792)[0m   "image_token_id": 151655,
+[36m(WorkerDict pid=5792)[0m   "initializer_range": 0.02,
+[36m(WorkerDict pid=5792)[0m   "intermediate_size": 18944,
+[36m(WorkerDict pid=5792)[0m   "max_position_embeddings": 128000,
+[36m(WorkerDict pid=5792)[0m   "max_window_layers": 28,
+[36m(WorkerDict pid=5792)[0m   "model_type": "qwen2_5_vl",
+[36m(WorkerDict pid=5792)[0m   "num_attention_heads": 28,
+[36m(WorkerDict pid=5792)[0m   "num_hidden_layers": 28,
+[36m(WorkerDict pid=5792)[0m   "num_key_value_heads": 4,
+[36m(WorkerDict pid=5792)[0m   "pad_token_id": 151643,
+[36m(WorkerDict pid=5792)[0m   "rms_norm_eps": 1e-06,
+[36m(WorkerDict pid=5792)[0m   "rope_scaling": {
+[36m(WorkerDict pid=5792)[0m     "mrope_section": [
+[36m(WorkerDict pid=5792)[0m       16,
+[36m(WorkerDict pid=5792)[0m       24,
+[36m(WorkerDict pid=5792)[0m       24
+[36m(WorkerDict pid=5792)[0m     ],
+[36m(WorkerDict pid=5792)[0m     "rope_type": "default",
+[36m(WorkerDict pid=5792)[0m     "type": "default"
+[36m(WorkerDict pid=5792)[0m   },
+[36m(WorkerDict pid=5792)[0m   "rope_theta": 1000000.0,
+[36m(WorkerDict pid=5792)[0m   "sliding_window": 32768,
+[36m(WorkerDict pid=5792)[0m   "tie_word_embeddings": false,
+[36m(WorkerDict pid=5792)[0m   "torch_dtype": "bfloat16",
+[36m(WorkerDict pid=5792)[0m   "transformers_version": "4.51.0",
+[36m(WorkerDict pid=5792)[0m   "use_cache": true,
+[36m(WorkerDict pid=5792)[0m   "use_sliding_window": false,
+[36m(WorkerDict pid=5792)[0m   "video_token_id": 151656,
+[36m(WorkerDict pid=5792)[0m   "vision_config": {
+[36m(WorkerDict pid=5792)[0m     "depth": 32,
+[36m(WorkerDict pid=5792)[0m     "fullatt_block_indexes": [
+[36m(WorkerDict pid=5792)[0m       7,
+[36m(WorkerDict pid=5792)[0m       15,
+[36m(WorkerDict pid=5792)[0m       23,
+[36m(WorkerDict pid=5792)[0m       31
+[36m(WorkerDict pid=5792)[0m     ],
+[36m(WorkerDict pid=5792)[0m     "hidden_act": "silu",
+[36m(WorkerDict pid=5792)[0m     "hidden_size": 1280,
+[36m(WorkerDict pid=5792)[0m     "in_channels": 3,
+[36m(WorkerDict pid=5792)[0m     "in_chans": 3,
+[36m(WorkerDict pid=5792)[0m     "intermediate_size": 3420,
+[36m(WorkerDict pid=5792)[0m     "model_type": "qwen2_5_vl",
+[36m(WorkerDict pid=5792)[0m     "num_heads": 16,
+[36m(WorkerDict pid=5792)[0m     "out_hidden_size": 3584,
+[36m(WorkerDict pid=5792)[0m     "patch_size": 14,
+[36m(WorkerDict pid=5792)[0m     "spatial_merge_size": 2,
+[36m(WorkerDict pid=5792)[0m     "spatial_patch_size": 14,
+[36m(WorkerDict pid=5792)[0m     "temporal_patch_size": 2,
+[36m(WorkerDict pid=5792)[0m     "tokens_per_second": 2,
+[36m(WorkerDict pid=5792)[0m     "window_size": 112
+[36m(WorkerDict pid=5792)[0m   },
+[36m(WorkerDict pid=5792)[0m   "vision_end_token_id": 151653,
+[36m(WorkerDict pid=5792)[0m   "vision_start_token_id": 151652,
+[36m(WorkerDict pid=5792)[0m   "vision_token_id": 151654,
+[36m(WorkerDict pid=5792)[0m   "vocab_size": 152064
+[36m(WorkerDict pid=5792)[0m }
+[36m(WorkerDict pid=5792)[0m 
+[36m(WorkerDict pid=5792)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=5792)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:03<00:13,  3.38s/it]
+[36m(WorkerDict pid=5792)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=6210)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=5792)[0m Monkey patch FlashAttention2.forward in Qwen2VL
+[36m(WorkerDict pid=6210)[0m Actor use_remove_padding=True
+[36m(WorkerDict pid=5792)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:08<00:00,  1.26s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:08<00:00,  1.68s/it]
+[36m(WorkerDict pid=6210)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:08<00:01,  1.99s/it][32m [repeated 7x across cluster][0m
+[36m(WorkerDict pid=5792)[0m Qwen2_5_VLForConditionalGeneration contains 8.29B parameters
+[36m(WorkerDict pid=5792)[0m wrap_policy: functools.partial(<function _or_policy at 0x7fb92b9e0670>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0x7fb92b9e0550>, transformer_layer_cls={<class 'transformers.models.qwen2_5_vl.modeling_qwen2_5_vl.Qwen2_5_VLDecoderLayer'>, <class 'transformers.models.qwen2_5_vl.modeling_qwen2_5_vl.Qwen2_5_VLVisionBlock'>})])
+[36m(WorkerDict pid=6210)[0m Total steps: 1613, num_warmup_steps: 0
+[36m(WorkerDict pid=6210)[0m Actor use_remove_padding=True
+[36m(WorkerDict pid=6210)[0m Monkey patch FlashAttention2.forward in Qwen2VL
+[36m(WorkerDict pid=6210)[0m wrap_policy: functools.partial(<function _or_policy at 0x7fe29b8b8670>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0x7fe29b8b8550>, transformer_layer_cls={<class 'transformers.models.qwen2_5_vl.modeling_qwen2_5_vl.Qwen2_5_VLVisionBlock'>, <class 'transformers.models.qwen2_5_vl.modeling_qwen2_5_vl.Qwen2_5_VLDecoderLayer'>})])
+[36m(WorkerDict pid=5792)[0m WARNING 01-29 10:30:31 [utils.py:2413] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7fb73025dcf0>
+[36m(WorkerDict pid=5792)[0m Total steps: 1613, num_warmup_steps: 0
+[36m(WorkerDict pid=5792)[0m Actor use_remove_padding=True
+[36m(WorkerDict pid=5792)[0m WARNING 01-29 10:30:32 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[36m(WorkerDict pid=6210)[0m kwargs: {'n': 10, 'logprobs': 0, 'max_tokens': 4096, 'detokenize': False, 'temperature': 1.0, 'top_k': -1, 'top_p': 1, 'ignore_eos': False}
+[36m(WorkerDict pid=6210)[0m WARNING 01-29 10:30:31 [utils.py:2413] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7fe07aeca380>
+[36m(WorkerDict pid=6210)[0m WARNING 01-29 10:30:32 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[36m(WorkerDict pid=6210)[0m /home/work/austin/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:690: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=6210)[0m   warnings.warn(
+[36m(WorkerDict pid=6210)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:09<00:00,  1.36s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:09<00:00,  1.83s/it]
+[36m(TaskRunner pid=4911)[0m wandb: Tracking run with wandb version 0.21.3
+[36m(TaskRunner pid=4911)[0m wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+[36m(TaskRunner pid=4911)[0m wandb: Run data is saved locally in /home/work/austin/MedCCO/verl/wandb/offline-run-20260129_103213-9shijfl2
+[36m(TaskRunner pid=4911)[0m Training Progress:   0%|          | 0/1613 [00:00<?, ?it/s]
+[36m(TaskRunner pid=4911)[0m Using LocalLogger is deprecated. The constructor API will change 
+[36m(TaskRunner pid=4911)[0m Checkpoint tracker file does not exist: %s /home/work/austin/MedCCO/verl/checkpoints/verl_grpo_medVQA/latest_checkpointed_iteration.txt
+[36m(TaskRunner pid=4911)[0m Training from scratch
+[36m(TaskRunner pid=4911)[0m [!]start to training!!!!
+[36m(WorkerDict pid=5792)[0m Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
+[36m(WorkerDict pid=5792)[0m /home/work/austin/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:690: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=5792)[0m   warnings.warn(
+[36m(WorkerDict pid=5792)[0m Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
+[36m(WorkerDict pid=5792)[0m Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
+[36m(WorkerDict pid=5792)[0m ![prompt] system
+[36m(WorkerDict pid=5792)[0m You are a helpful assistant.
+[36m(WorkerDict pid=5792)[0m user
+[36m(WorkerDict pid=5792)[0m does lymphangiomatosis generalized show x-ray horizontal sections of ventricle showing penetrating artery distribution quite good? You are tasked with analyzing an image to generate a detailed description to help you answer the question. First, analyze the image and produce a detailed roi-focused description in <report> </report> tags. Next, engage in an internal dialogue and include self-reflection or verification in your reasoning process. Provide your detailed, step-by-step reasoning based on the image and description, wrap this in <think> </think> tags. Finally, provide the answer to the question in <answer> </answer> tags. The output answer format should be as follows: <report> description here </report> <think> reasoning process here </think><answer> answer here (Do not provide any explanation)</answer>. Please strictly follow the format.
+[36m(WorkerDict pid=5792)[0m assistant
+[36m(WorkerDict pid=5792)[0m 
+[36m(WorkerDict pid=5792)[0m 
+[36m(WorkerDict pid=5792)[0m                     ![response] <report>
+[36m(WorkerDict pid=5792)[0m The image displays radiographic structures that appear to be circular and concentric, resembling sections of a ventricle with a network or web-like pattern in the periphery. The structures have a dark background, and the radiographic pattern is predominantly white, indicating the bone or calcified portion of the structures. The white pattern within the radius of each circle suggests penetration or distribution, which may resemble penetrating vessels in medical imaging similar to lymphatic structures. However, it should be noted that this interpretation is speculative and indicative of a resemblance rather than a definitive medical analysis.
+[36m(WorkerDict pid=5792)[0m </report>
+[36m(WorkerDict pid=5792)[0m <think>
+[36m(WorkerDict pid=5792)[0m This image does not provide definitive evidence of a lymphangiomatosis generalized condition, which is specifically a pathological condition characterized by the proliferation of lymphatic vessels and tissues. The description of the image (report) includes speculative attributions to characteristics that might be present in a cardiac MRI or CT scan in a lymphangiomatosis case due to the radiopaque nature that might resemble the distribution of vessels around ventricles. However, to confirm such conditions, a medical professional who specializes in cardiovascular or lymphatic imaging would be required.
+[36m(WorkerDict pid=5792)[0m </think>
+[36m(WorkerDict pid=5792)[0m <answer> No </answer>
+[36m(WorkerDict pid=5792)[0m 
+[36m(WorkerDict pid=5792)[0m                     ![ground_truth] no
+[36m(WorkerDict pid=5792)[0m 
+[36m(WorkerDict pid=5792)[0m                     ![score]: answer_type CLOSED total: 0.9361, 
+[36m(WorkerDict pid=5792)[0m                     open_bert: 0.0000, 
+[36m(WorkerDict pid=5792)[0m                     open_bleu: 0.0000, 
+[36m(WorkerDict pid=5792)[0m                     open_rouge: 0.0000
+[36m(WorkerDict pid=5792)[0m                     report_generation: 0.6806
+[36m(WorkerDict pid=5792)[0m                     [score_close_format]: close_reward: 1.0000, format_reward: 1.0000
+[36m(WorkerDict pid=5792)[0m kwargs: {'n': 10, 'logprobs': 0, 'max_tokens': 4096, 'detokenize': False, 'temperature': 1.0, 'top_k': -1, 'top_p': 1, 'ignore_eos': False}
+[36m(WorkerDict pid=6210)[0m 
+[36m(WorkerDict pid=6210)[0m 
+[36m(WorkerDict pid=6210)[0m                     ![response] <report> The image depicts a series of three sections that appear to be under a microscope or in an imaging technique that highlights the internal structure of what could be tissues or cells. The lighter areas are distributed in a web-like or vascular pattern, indicative of a permeating infection, blocking, or possibly angiogenic activity. The dark background contrasts with the lighter areas, making the structures stand out more vividly. The structures are clearly visible against the deep blue or black backdrop, suggesting they are sections from within a larger entity.
+[36m(WorkerDict pid=6210)[0m 
+[36m(WorkerDict pid=6210)[0m <think> The image's resemblance to the ventricle wall with visible penetrating arteries in a radiological setting seems abstract and not definitive for a lymphangiomatosis condition, especially generalized, as it does not display blood vessels or ventricular anatomy appropriately labeled or contextually shown. The "penetrating artery distribution" inference might be confused with the vascular characteristics often associated with lymphatic structures in cases like lymphangiomatosis. However, confirming this interpretation would require a comparison with a known anatomical reference or clinical radiography.
+[36m(WorkerDict pid=6210)[0m 
+[36m(WorkerDict pid=6210)[0m Given these points, the image does show an evocative web-like vascular pattern, but it is not definitively as the x-ray horizontal sections of ventricles. The analysis is more suggestive than definitive, especially without anatomical or clinic-case cross-reference.
+[36m(WorkerDict pid=6210)[0m 
+[36m(WorkerDict pid=6210)[0m 
+[36m(WorkerDict pid=6210)[0m 
+Error executing job with overrides: ['algorithm.adv_estimator=grpo', 'data.train_files=/home/work/austin/MedCCO/preprocess/verl_parquet/train_medreport_wqa.parquet', 'data.val_files=/home/work/austin/MedCCO/preprocess/verl_parquet/train_medreport_wqa.parquet', 'data.train_batch_size=16', 'data.max_prompt_length=4096', 'data.max_response_length=4096', 'data.filter_overlong_prompts=True', 'data.truncation=error', 'data.image_key=images', 'reward_model.custom_rm=True', 'reward_model.reward_manager=None', 'actor_rollout_ref.model.path=/home/work/austin/MedCCO/llms/Qwen2.5-VL-7B-Instruct', 'actor_rollout_ref.actor.optim.lr=1e-6', 'actor_rollout_ref.model.use_remove_padding=True', 'actor_rollout_ref.actor.ppo_mini_batch_size=16', 'actor_rollout_ref.actor.ppo_micro_batch_size_per_gpu=10', 'actor_rollout_ref.actor.use_kl_loss=True', 'actor_rollout_ref.actor.kl_loss_coef=0.01', 'actor_rollout_ref.actor.kl_loss_type=low_var_kl', 'actor_rollout_ref.actor.entropy_coeff=0', 'actor_rollout_ref.model.enable_gradient_checkpointing=True', 'actor_rollout_ref.actor.fsdp_config.param_offload=False', 'actor_rollout_ref.actor.fsdp_config.optimizer_offload=False', 'actor_rollout_ref.rollout.log_prob_micro_batch_size_per_gpu=20', 'actor_rollout_ref.rollout.tensor_model_parallel_size=1', 'actor_rollout_ref.rollout.name=vllm', 'actor_rollout_ref.rollout.gpu_memory_utilization=0.8', 'actor_rollout_ref.rollout.enable_chunked_prefill=False', 'actor_rollout_ref.rollout.enforce_eager=False', 'actor_rollout_ref.rollout.free_cache_engine=False', 'actor_rollout_ref.rollout.n=10', 'actor_rollout_ref.ref.log_prob_micro_batch_size_per_gpu=20', 'actor_rollout_ref.ref.fsdp_config.param_offload=True', 'algorithm.use_kl_in_reward=False', 'trainer.critic_warmup=0', 'trainer.logger=[console,wandb]', 'trainer.project_name=verl_grpo_medVQA', 'trainer.experiment_name=', 'trainer.n_gpus_per_node=2', 'trainer.nnodes=1', 'trainer.save_freq=100', 'trainer.test_freq=-1', 'trainer.total_epochs=1']
+Traceback (most recent call last):
+  File "/home/work/austin/MedCCO/verl/verl/trainer/main_ppo.py", line 66, in main
+    run_ppo(config)
+  File "/home/work/austin/MedCCO/verl/verl/trainer/main_ppo.py", line 87, in run_ppo
+    ray.get(runner.run.remote(config))
+  File "/home/work/austin/myenv/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/home/work/austin/myenv/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+  File "/home/work/austin/myenv/lib/python3.10/site-packages/ray/_private/worker.py", line 2972, in get
+    values, debugger_breakpoint = worker.get_objects(
+  File "/home/work/austin/myenv/lib/python3.10/site-packages/ray/_private/worker.py", line 1031, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::TaskRunner.run()[39m (pid=4911, ip=172.16.0.2, actor_id=3b63c666356c489ca80f64a901000000, repr=<main_ppo.TaskRunner object at 0x7fa9c7316080>)
+  File "/home/work/austin/MedCCO/verl/verl/trainer/main_ppo.py", line 198, in run
+    trainer.fit()
+  File "/home/work/austin/MedCCO/verl/verl/trainer/ppo/ray_trainer.py", line 1016, in fit
+    ref_log_prob = self.ref_policy_wg.compute_ref_log_prob(batch)
+  File "/home/work/austin/MedCCO/verl/verl/single_controller/ray/base.py", line 47, in func
+    output = ray.get(output)
+ray.exceptions.OutOfMemoryError: Task was killed due to the node running low on memory.
+Memory on the node (IP: 172.16.0.2, ID: 3e48c16f234e0e5c31136251b65d7288993182f449cdf16041a0d2e5) where the lease (lease ID: 0300000051e25ed015fbe72e8531982603895810552f881898c1232bd13cd03c, name=0JjJFLWorkerDict_0:1:WorkerDict.__init__, pid=6210, memory used=58.24GB) was running was 124.36GB / 128.00GB (0.971558), which exceeds the memory usage threshold of 0.95. Ray killed this worker (ID: c052f34832d5dbd3f7b54d1afd6a744574f9038fb4c507d9ca5367be) because it was the most recently scheduled task; to see more information about memory usage on this node, use `ray logs raylet.out -ip 172.16.0.2`. To see the logs of the worker, use `ray logs worker-c052f34832d5dbd3f7b54d1afd6a744574f9038fb4c507d9ca5367be*out -ip 172.16.0.2. Top 10 memory users:
+PID	MEM(GB)	COMMAND
+5792	59.08	ray::WorkerDict.ref_compute_ref_log_prob
+6210	58.24	ray::WorkerDict.ref_compute_ref_log_prob
+3323	1.34	/home/work/austin/myenv/lib/python3.10/site-packages/ray/core/src/ray/gcs/gcs_server --log_dir=/tmp/...
+4911	0.44	ray::TaskRunner.run
+3812	0.42	python3 -m verl.trainer.main_ppo algorithm.adv_estimator=grpo data.train_files=/home/work/austin/Med...
+395	0.16	/usr/local/lib/code-server-4.93.1/lib/node /usr/local/lib/code-server-4.93.1/lib/vscode/out/bootstra...
+388	0.12	/usr/local/lib/code-server-4.93.1/lib/node --dns-result-order=ipv4first /usr/local/lib/code-server-4...
+8108	0.10	ray::TaskRunner.run
+8117	0.10	ray::TaskRunner.run
+8120	0.09	ray::TaskRunner.run
+Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-core/scheduling/ray-oom-prevention.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. Set max_restarts and max_task_retries to enable retry when the task crashes due to OOM. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero.
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+[36m(WorkerDict pid=6210)[0m ![prompt] system
+[36m(WorkerDict pid=6210)[0m You are a helpful assistant.
+[36m(WorkerDict pid=6210)[0m user
+[36m(WorkerDict pid=6210)[0m does lymphangiomatosis generalized show x-ray horizontal sections of ventricle showing penetrating artery distribution quite good? You are tasked with analyzing an image to generate a detailed description to help you answer the question. First, analyze the image and produce a detailed roi-focused description in <report> </report> tags. Next, engage in an internal dialogue and include self-reflection or verification in your reasoning process. Provide your detailed, step-by-step reasoning based on the image and description, wrap this in <think> </think> tags. Finally, provide the answer to the question in <answer> </answer> tags. The output answer format should be as follows: <report> description here </report> <think> reasoning process here </think><answer> answer here (Do not provide any explanation)</answer>. Please strictly follow the format.
+[36m(WorkerDict pid=6210)[0m assistant
+[36m(WorkerDict pid=6210)[0m </think>
+[36m(WorkerDict pid=6210)[0m <answer> No </answer>
+[36m(WorkerDict pid=6210)[0m                     ![ground_truth] no
+[36m(WorkerDict pid=6210)[0m                     ![score]: answer_type CLOSED total: 0.6674, 
+[36m(WorkerDict pid=6210)[0m                     open_bert: 0.0000, 
+[36m(WorkerDict pid=6210)[0m                     open_bleu: 0.0000, 
+[36m(WorkerDict pid=6210)[0m                     open_rouge: 0.0000
+[36m(WorkerDict pid=6210)[0m                     report_generation: -0.1631
+[36m(WorkerDict pid=6210)[0m                     [score_close_format]: close_reward: 1.0000, format_reward: 0.0000
+[36m(WorkerDict pid=6210)[0m Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
+[INFO] Forcing Ray into local mode...,num_gpus:  2
+2026-01-29 10:35:06,038	INFO worker.py:1837 -- Connecting to existing Ray cluster at address: 172.16.0.2:8262...
+2026-01-29 10:35:06,049	INFO worker.py:2023 -- Connected to Ray cluster.
+/home/work/austin/myenv/lib/python3.10/site-packages/ray/_private/worker.py:2062: FutureWarning: Tip: In future versions of Ray, Ray will no longer override accelerator visible devices env var if num_gpus=0 or num_gpus=None (default). To enable this behavior and turn off this error message, set RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO=0
+  warnings.warn(
+[36m(TaskRunner pid=10442)[0m {'actor_rollout_ref': {'actor': {'checkpoint': {'contents': ['model',
+[36m(TaskRunner pid=10442)[0m                                                              'optimizer',
+[36m(TaskRunner pid=10442)[0m                                                              'extra']},
+[36m(TaskRunner pid=10442)[0m                                  'clip_ratio': 0.2,
+[36m(TaskRunner pid=10442)[0m                                  'clip_ratio_c': 3.0,
+[36m(TaskRunner pid=10442)[0m                                  'clip_ratio_high': 0.2,
+[36m(TaskRunner pid=10442)[0m                                  'clip_ratio_low': 0.2,
+[36m(TaskRunner pid=10442)[0m                                  'entropy_coeff': 0,
+[36m(TaskRunner pid=10442)[0m                                  'fsdp_config': {'fsdp_size': -1,
+[36m(TaskRunner pid=10442)[0m                                                  'optimizer_offload': False,
+[36m(TaskRunner pid=10442)[0m                                                  'param_offload': False,
+[36m(TaskRunner pid=10442)[0m                                                  'wrap_policy': {'min_num_params': 0}},
+[36m(TaskRunner pid=10442)[0m                                  'grad_clip': 1.0,
+[36m(TaskRunner pid=10442)[0m                                  'kl_loss_coef': 0.01,
+[36m(TaskRunner pid=10442)[0m                                  'kl_loss_type': 'low_var_kl',
+[36m(TaskRunner pid=10442)[0m                                  'loss_agg_mode': 'token-mean',
+[36m(TaskRunner pid=10442)[0m                                  'optim': {'lr': 1e-06,
+[36m(TaskRunner pid=10442)[0m                                            'lr_warmup_steps': -1,
+[36m(TaskRunner pid=10442)[0m                                            'lr_warmup_steps_ratio': 0.0,
+[36m(TaskRunner pid=10442)[0m                                            'min_lr_ratio': None,
+[36m(TaskRunner pid=10442)[0m                                            'total_training_steps': -1,
+[36m(TaskRunner pid=10442)[0m                                            'warmup_style': 'constant',
+[36m(TaskRunner pid=10442)[0m                                            'weight_decay': 0.01},
+[36m(TaskRunner pid=10442)[0m                                  'ppo_epochs': 1,
+[36m(TaskRunner pid=10442)[0m                                  'ppo_max_token_len_per_gpu': 16384,
+[36m(TaskRunner pid=10442)[0m                                  'ppo_micro_batch_size': None,
+[36m(TaskRunner pid=10442)[0m                                  'ppo_micro_batch_size_per_gpu': 10,
+[36m(TaskRunner pid=10442)[0m                                  'ppo_mini_batch_size': 16,
+[36m(TaskRunner pid=10442)[0m                                  'shuffle': False,
+[36m(TaskRunner pid=10442)[0m                                  'strategy': 'fsdp',
+[36m(TaskRunner pid=10442)[0m                                  'ulysses_sequence_parallel_size': 1,
+[36m(TaskRunner pid=10442)[0m                                  'use_dynamic_bsz': False,
+[36m(TaskRunner pid=10442)[0m                                  'use_kl_loss': True,
+[36m(TaskRunner pid=10442)[0m                                  'use_torch_compile': True},
+[36m(TaskRunner pid=10442)[0m                        'hybrid_engine': True,
+[36m(TaskRunner pid=10442)[0m                        'model': {'enable_gradient_checkpointing': True,
+[36m(TaskRunner pid=10442)[0m                                  'external_lib': None,
+[36m(TaskRunner pid=10442)[0m                                  'override_config': {},
+[36m(TaskRunner pid=10442)[0m                                  'path': '/home/work/austin/MedCCO/llms/Qwen2.5-VL-7B-Instruct',
+[36m(TaskRunner pid=10442)[0m                                  'use_liger': False,
+[36m(TaskRunner pid=10442)[0m                                  'use_remove_padding': True},
+[36m(TaskRunner pid=10442)[0m                        'ref': {'fsdp_config': {'param_offload': True,
+[36m(TaskRunner pid=10442)[0m                                                'wrap_policy': {'min_num_params': 0}},
+[36m(TaskRunner pid=10442)[0m                                'log_prob_max_token_len_per_gpu': 16384,
+[36m(TaskRunner pid=10442)[0m                                'log_prob_micro_batch_size': None,
+[36m(TaskRunner pid=10442)[0m                                'log_prob_micro_batch_size_per_gpu': 20,
+[36m(TaskRunner pid=10442)[0m                                'log_prob_use_dynamic_bsz': False,
+[36m(TaskRunner pid=10442)[0m                                'strategy': 'fsdp',
+[36m(TaskRunner pid=10442)[0m                                'ulysses_sequence_parallel_size': 1,
+[36m(TaskRunner pid=10442)[0m                                'use_torch_compile': True},
+[36m(TaskRunner pid=10442)[0m                        'rollout': {'chat_scheduler': None,
+[36m(TaskRunner pid=10442)[0m                                    'disable_log_stats': True,
+[36m(TaskRunner pid=10442)[0m                                    'do_sample': True,
+[36m(TaskRunner pid=10442)[0m                                    'dtype': 'bfloat16',
+[36m(TaskRunner pid=10442)[0m                                    'enable_chunked_prefill': False,
+[36m(TaskRunner pid=10442)[0m                                    'enforce_eager': False,
+[36m(TaskRunner pid=10442)[0m                                    'engine_kwargs': {'swap_space': None},
+[36m(TaskRunner pid=10442)[0m                                    'free_cache_engine': False,
+[36m(TaskRunner pid=10442)[0m                                    'gpu_memory_utilization': 0.8,
+[36m(TaskRunner pid=10442)[0m                                    'ignore_eos': False,
+[36m(TaskRunner pid=10442)[0m                                    'load_format': 'dummy_dtensor',
+[36m(TaskRunner pid=10442)[0m                                    'log_prob_max_token_len_per_gpu': 16384,
+[36m(TaskRunner pid=10442)[0m                                    'log_prob_micro_batch_size': None,
+[36m(TaskRunner pid=10442)[0m                                    'log_prob_micro_batch_size_per_gpu': 20,
+[36m(TaskRunner pid=10442)[0m                                    'log_prob_use_dynamic_bsz': False,
+[36m(TaskRunner pid=10442)[0m                                    'max_model_len': None,
+[36m(TaskRunner pid=10442)[0m                                    'max_num_batched_tokens': 8192,
+[36m(TaskRunner pid=10442)[0m                                    'max_num_seqs': 1024,
+[36m(TaskRunner pid=10442)[0m                                    'mode': 'sync',
+[36m(TaskRunner pid=10442)[0m                                    'multi_turn': {'enable': False,
+[36m(TaskRunner pid=10442)[0m                                                   'format': 'chatml',
+[36m(TaskRunner pid=10442)[0m                                                   'max_turns': None,
+[36m(TaskRunner pid=10442)[0m                                                   'tool_config_path': None},
+[36m(TaskRunner pid=10442)[0m                                    'n': 10,
+[36m(TaskRunner pid=10442)[0m                                    'name': 'vllm',
+[36m(TaskRunner pid=10442)[0m                                    'prompt_length': 4096,
+[36m(TaskRunner pid=10442)[0m                                    'response_length': 4096,
+[36m(TaskRunner pid=10442)[0m                                    'temperature': 1.0,
+[36m(TaskRunner pid=10442)[0m                                    'tensor_model_parallel_size': 1,
+[36m(TaskRunner pid=10442)[0m                                    'top_k': -1,
+[36m(TaskRunner pid=10442)[0m                                    'top_p': 1,
+[36m(TaskRunner pid=10442)[0m                                    'use_fire_sampling': False,
+[36m(TaskRunner pid=10442)[0m                                    'val_kwargs': {'do_sample': False,
+[36m(TaskRunner pid=10442)[0m                                                   'n': 1,
+[36m(TaskRunner pid=10442)[0m                                                   'temperature': 0,
+[36m(TaskRunner pid=10442)[0m                                                   'top_k': -1,
+[36m(TaskRunner pid=10442)[0m                                                   'top_p': 1.0}}},
+[36m(TaskRunner pid=10442)[0m  'algorithm': {'adv_estimator': 'grpo',
+[36m(TaskRunner pid=10442)[0m                'gamma': 1.0,
+[36m(TaskRunner pid=10442)[0m                'kl_ctrl': {'horizon': 10000,
+[36m(TaskRunner pid=10442)[0m                            'kl_coef': 0.001,
+[36m(TaskRunner pid=10442)[0m                            'target_kl': 0.1,
+[36m(TaskRunner pid=10442)[0m                            'type': 'fixed'},
+[36m(TaskRunner pid=10442)[0m                'kl_penalty': 'kl',
+[36m(TaskRunner pid=10442)[0m                'lam': 1.0,
+[36m(TaskRunner pid=10442)[0m                'norm_adv_by_std_in_grpo': True,
+[36m(TaskRunner pid=10442)[0m                'use_kl_in_reward': False},
+[36m(TaskRunner pid=10442)[0m  'critic': {'checkpoint': {'contents': ['model', 'optimizer', 'extra']},
+[36m(TaskRunner pid=10442)[0m             'cliprange_value': 0.5,
+[36m(TaskRunner pid=10442)[0m             'forward_max_token_len_per_gpu': 32768,
+[36m(TaskRunner pid=10442)[0m             'forward_micro_batch_size': None,
+[36m(TaskRunner pid=10442)[0m             'forward_micro_batch_size_per_gpu': None,
+[36m(TaskRunner pid=10442)[0m             'grad_clip': 1.0,
+[36m(TaskRunner pid=10442)[0m             'model': {'enable_gradient_checkpointing': True,
+[36m(TaskRunner pid=10442)[0m                       'external_lib': None,
+[36m(TaskRunner pid=10442)[0m                       'fsdp_config': {'fsdp_size': -1,
+[36m(TaskRunner pid=10442)[0m                                       'optimizer_offload': False,
+[36m(TaskRunner pid=10442)[0m                                       'param_offload': False,
+[36m(TaskRunner pid=10442)[0m                                       'wrap_policy': {'min_num_params': 0}},
+[36m(TaskRunner pid=10442)[0m                       'override_config': {},
+[36m(TaskRunner pid=10442)[0m                       'path': '~/models/deepseek-llm-7b-chat',
+[36m(TaskRunner pid=10442)[0m                       'tokenizer_path': '/home/work/austin/MedCCO/llms/Qwen2.5-VL-7B-Instruct',
+[36m(TaskRunner pid=10442)[0m                       'use_remove_padding': False},
+[36m(TaskRunner pid=10442)[0m             'optim': {'lr': 1e-05,
+[36m(TaskRunner pid=10442)[0m                       'lr_warmup_steps_ratio': 0.0,
+[36m(TaskRunner pid=10442)[0m                       'min_lr_ratio': None,
+[36m(TaskRunner pid=10442)[0m                       'total_training_steps': -1,
+[36m(TaskRunner pid=10442)[0m                       'warmup_style': 'constant',
+[36m(TaskRunner pid=10442)[0m                       'weight_decay': 0.01},
+[36m(TaskRunner pid=10442)[0m             'ppo_epochs': 1,
+[36m(TaskRunner pid=10442)[0m             'ppo_max_token_len_per_gpu': 32768,
+[36m(TaskRunner pid=10442)[0m             'ppo_micro_batch_size': None,
+[36m(TaskRunner pid=10442)[0m             'ppo_micro_batch_size_per_gpu': None,
+[36m(TaskRunner pid=10442)[0m             'ppo_mini_batch_size': 16,
+[36m(TaskRunner pid=10442)[0m             'rollout_n': 10,
+[36m(TaskRunner pid=10442)[0m             'shuffle': False,
+[36m(TaskRunner pid=10442)[0m             'strategy': 'fsdp',
+[36m(TaskRunner pid=10442)[0m             'ulysses_sequence_parallel_size': 1,
+[36m(TaskRunner pid=10442)[0m             'use_dynamic_bsz': False},
+[36m(TaskRunner pid=10442)[0m  'custom_reward_function': {'name': 'compute_score', 'path': None},
+[36m(TaskRunner pid=10442)[0m  'data': {'answer_type': 'None',
+[36m(TaskRunner pid=10442)[0m           'custom_cls': {'name': None, 'path': None},
+[36m(TaskRunner pid=10442)[0m           'debug': False,
+[36m(TaskRunner pid=10442)[0m           'filter_overlong_prompts': True,
+[36m(TaskRunner pid=10442)[0m           'filter_overlong_prompts_workers': 1,
+[36m(TaskRunner pid=10442)[0m           'image_key': 'images',
+[36m(TaskRunner pid=10442)[0m           'max_prompt_length': 4096,
+[36m(TaskRunner pid=10442)[0m           'max_response_length': 4096,
+[36m(TaskRunner pid=10442)[0m           'prompt_key': 'prompt',
+[36m(TaskRunner pid=10442)[0m           'return_raw_chat': False,
+[36m(TaskRunner pid=10442)[0m           'return_raw_input_ids': False,
+[36m(TaskRunner pid=10442)[0m           'reward_fn_key': 'data_source',
+[36m(TaskRunner pid=10442)[0m           'shuffle': True,
+[36m(TaskRunner pid=10442)[0m           'tokenizer': None,
+[36m(TaskRunner pid=10442)[0m           'train_batch_size': 16,
+[36m(TaskRunner pid=10442)[0m           'train_files': '/home/work/austin/MedCCO/preprocess/verl_parquet/train_medreport_wqa.parquet',
+[36m(TaskRunner pid=10442)[0m           'truncation': 'error',
+[36m(TaskRunner pid=10442)[0m           'val_batch_size': None,
+[36m(TaskRunner pid=10442)[0m           'val_files': '/home/work/austin/MedCCO/preprocess/verl_parquet/train_medreport_wqa.parquet',
+[36m(TaskRunner pid=10442)[0m           'video_key': 'videos'},
+[36m(TaskRunner pid=10442)[0m  'ray_init': {'num_cpus': None},
+[36m(TaskRunner pid=10442)[0m  'reward_model': {'custom_rm': True,
+[36m(TaskRunner pid=10442)[0m                   'enable': False,
+[36m(TaskRunner pid=10442)[0m                   'forward_max_token_len_per_gpu': 32768,
+[36m(TaskRunner pid=10442)[0m                   'launch_reward_fn_async': False,
+[36m(TaskRunner pid=10442)[0m                   'max_length': None,
+[36m(TaskRunner pid=10442)[0m                   'micro_batch_size': None,
+[36m(TaskRunner pid=10442)[0m                   'micro_batch_size_per_gpu': None,
+[36m(TaskRunner pid=10442)[0m                   'model': {'external_lib': None,
+[36m(TaskRunner pid=10442)[0m                             'fsdp_config': {'fsdp_size': -1,
+[36m(TaskRunner pid=10442)[0m                                             'param_offload': False,
+[36m(TaskRunner pid=10442)[0m                                             'wrap_policy': {'min_num_params': 0}},
+[36m(TaskRunner pid=10442)[0m                             'input_tokenizer': '/home/work/austin/MedCCO/llms/Qwen2.5-VL-7B-Instruct',
+[36m(TaskRunner pid=10442)[0m                             'path': '~/models/FsfairX-LLaMA3-RM-v0.1',
+[36m(TaskRunner pid=10442)[0m                             'use_remove_padding': False},
+[36m(TaskRunner pid=10442)[0m                   'reward_manager': 'None',
+[36m(TaskRunner pid=10442)[0m                   'strategy': 'fsdp',
+[36m(TaskRunner pid=10442)[0m                   'ulysses_sequence_parallel_size': 1,
+[36m(TaskRunner pid=10442)[0m                   'use_dynamic_bsz': False},
+[36m(TaskRunner pid=10442)[0m  'trainer': {'balance_batch': True,
+[36m(TaskRunner pid=10442)[0m              'critic_warmup': 0,
+[36m(TaskRunner pid=10442)[0m              'default_hdfs_dir': None,
+[36m(TaskRunner pid=10442)[0m              'default_local_dir': 'checkpoints/verl_grpo_medVQA/',
+[36m(TaskRunner pid=10442)[0m              'del_local_ckpt_after_load': False,
+[36m(TaskRunner pid=10442)[0m              'experiment_name': '',
+[36m(TaskRunner pid=10442)[0m              'log_val_generations': 0,
+[36m(TaskRunner pid=10442)[0m              'logger': ['console', 'wandb'],
+[36m(TaskRunner pid=10442)[0m              'max_actor_ckpt_to_keep': None,
+[36m(TaskRunner pid=10442)[0m              'max_critic_ckpt_to_keep': None,
+[36m(TaskRunner pid=10442)[0m              'n_gpus_per_node': 2,
+[36m(TaskRunner pid=10442)[0m              'nnodes': 1,
+[36m(TaskRunner pid=10442)[0m              'project_name': 'verl_grpo_medVQA',
+[36m(TaskRunner pid=10442)[0m              'ray_wait_register_center_timeout': 300,
+[36m(TaskRunner pid=10442)[0m              'resume_from_path': None,
+[36m(TaskRunner pid=10442)[0m              'resume_mode': 'auto',
+[36m(TaskRunner pid=10442)[0m              'rollout_data_dir': None,
+[36m(TaskRunner pid=10442)[0m              'save_freq': 100,
+[36m(TaskRunner pid=10442)[0m              'test_freq': -1,
+[36m(TaskRunner pid=10442)[0m              'total_epochs': 1,
+[36m(TaskRunner pid=10442)[0m              'total_training_steps': None,
+[36m(TaskRunner pid=10442)[0m              'val_before_train': False,
+[36m(TaskRunner pid=10442)[0m              'validation_data_dir': None}}
+[36m(TaskRunner pid=10442)[0m [validate_config] All configuration checks passed successfully!
+[36m(TaskRunner pid=10442)[0m Using default dataset class: RLHFDataset
+[36m(TaskRunner pid=10442)[0m dataset len: 25811
+[36m(TaskRunner pid=10442)[0m Setting TOKENIZERS_PARALLELISM=false for forked processes.
+[36m(TaskRunner pid=10442)[0m WARNING:2026-01-29 10:35:14,789:Setting TOKENIZERS_PARALLELISM=false for forked processes.
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):   0%|          | 0/25811 [00:00<?, ? examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):   4%|▍         | 1000/25811 [00:01<00:29, 846.34 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):   8%|▊         | 2000/25811 [00:01<00:17, 1380.31 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  12%|█▏        | 3000/25811 [00:01<00:13, 1741.89 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  15%|█▌        | 4000/25811 [00:02<00:11, 1963.27 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  19%|█▉        | 5000/25811 [00:02<00:09, 2094.45 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  23%|██▎       | 6000/25811 [00:03<00:08, 2206.36 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  27%|██▋       | 7000/25811 [00:03<00:08, 2282.31 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  31%|███       | 8000/25811 [00:04<00:07, 2314.88 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  35%|███▍      | 9000/25811 [00:04<00:07, 2300.93 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  39%|███▊      | 10000/25811 [00:04<00:06, 2311.04 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  43%|████▎     | 11000/25811 [00:05<00:06, 2341.57 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  46%|████▋     | 12000/25811 [00:05<00:05, 2361.65 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  50%|█████     | 13000/25811 [00:06<00:05, 2366.64 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  54%|█████▍    | 14000/25811 [00:06<00:04, 2388.60 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  58%|█████▊    | 15000/25811 [00:06<00:04, 2389.24 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  62%|██████▏   | 16000/25811 [00:07<00:04, 2393.24 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  66%|██████▌   | 17000/25811 [00:07<00:03, 2367.86 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  70%|██████▉   | 18000/25811 [00:08<00:03, 2346.48 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  74%|███████▎  | 19000/25811 [00:08<00:02, 2369.80 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  77%|███████▋  | 20000/25811 [00:09<00:02, 2389.97 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  81%|████████▏ | 21000/25811 [00:09<00:01, 2406.66 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  85%|████████▌ | 22000/25811 [00:09<00:01, 2420.13 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  89%|████████▉ | 23000/25811 [00:10<00:01, 2425.77 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  93%|█████████▎| 24000/25811 [00:10<00:00, 2430.90 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1):  97%|█████████▋| 25000/25811 [00:11<00:00, 2431.02 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1): 100%|██████████| 25811/25811 [00:11<00:00, 2433.20 examples/s]
+[36m(TaskRunner pid=10442)[0m Filtering prompts longer than 4096 tokens (num_proc=1): 100%|██████████| 25811/25811 [00:11<00:00, 2226.71 examples/s]
+[36m(TaskRunner pid=10442)[0m filter dataset len: 25811
+[36m(TaskRunner pid=10442)[0m dataset len: 25811
+[36m(pid=gcs_server)[0m [2026-01-29 10:35:27,048 E 8864 8864] (gcs_server) gcs_server.cc:303: Failed to establish connection to the event+metrics exporter agent. Events and metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(TaskRunner pid=10442)[0m Setting TOKENIZERS_PARALLELISM=false for forked processes.
+[36m(TaskRunner pid=10442)[0m WARNING:2026-01-29 10:35:27,197:Setting TOKENIZERS_PARALLELISM=false for forked processes.
+[36m(TaskRunner pid=10442)[0m DeprecationWarning: `ray.state.available_resources_per_node` is a private attribute and access will be removed in a future Ray version.
+[36m(TaskRunner pid=10442)[0m filter dataset len: 25811
+[36m(TaskRunner pid=10442)[0m Size of train dataloader: 1613, Size of val dataloader: 1
+[36m(TaskRunner pid=10442)[0m Total training steps: 1613
+[36m(TaskRunner pid=10442)[0m colocated worker base class <class 'verl.single_controller.base.worker.Worker'>
+[36m(TaskRunner pid=10442)[0m WARNING:2026-01-29 10:35:28,505:Waiting for register center actor MdNPUr_register_center to be ready. Elapsed time: 0 seconds out of 300 seconds.
+[33m(raylet)[0m [2026-01-29 10:35:28,961 E 9267 9267] (raylet) main.cc:979: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(pid=9665)[0m [2026-01-29 10:35:36,666 E 9665 9766] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[2026-01-29 10:35:36,863 E 9464 9657] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(WorkerDict pid=11666)[0m Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[36m(TaskRunner pid=10442)[0m [2026-01-29 10:35:37,872 E 10442 10509] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14[32m [repeated 12x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[36m(WorkerDict pid=11666)[0m You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+[36m(WorkerDict pid=11277)[0m Model config after override: Qwen2_5_VLConfig {
+[36m(WorkerDict pid=11277)[0m   "architectures": [
+[36m(WorkerDict pid=11277)[0m     "Qwen2_5_VLForConditionalGeneration"
+[36m(WorkerDict pid=11277)[0m   ],
+[36m(WorkerDict pid=11277)[0m   "attention_dropout": 0.0,
+[36m(WorkerDict pid=11277)[0m   "eos_token_id": 151645,
+[36m(WorkerDict pid=11277)[0m   "hidden_act": "silu",
+[36m(WorkerDict pid=11277)[0m   "hidden_size": 3584,
+[36m(WorkerDict pid=11277)[0m   "image_token_id": 151655,
+[36m(WorkerDict pid=11277)[0m   "initializer_range": 0.02,
+[36m(WorkerDict pid=11277)[0m   "intermediate_size": 18944,
+[36m(WorkerDict pid=11277)[0m   "max_position_embeddings": 128000,
+[36m(WorkerDict pid=11277)[0m   "max_window_layers": 28,
+[36m(WorkerDict pid=11277)[0m   "model_type": "qwen2_5_vl",
+[36m(WorkerDict pid=11277)[0m   "num_attention_heads": 28,
+[36m(WorkerDict pid=11277)[0m   "num_hidden_layers": 28,
+[36m(WorkerDict pid=11277)[0m   "num_key_value_heads": 4,
+[36m(WorkerDict pid=11277)[0m   "pad_token_id": 151643,
+[36m(WorkerDict pid=11277)[0m   "rms_norm_eps": 1e-06,
+[36m(WorkerDict pid=11277)[0m   "rope_scaling": {
+[36m(WorkerDict pid=11277)[0m     "mrope_section": [
+[36m(WorkerDict pid=11277)[0m       16,
+[36m(WorkerDict pid=11277)[0m       24,
+[36m(WorkerDict pid=11277)[0m       24
+[36m(WorkerDict pid=11277)[0m     ],
+[36m(WorkerDict pid=11277)[0m     "rope_type": "default",
+[36m(WorkerDict pid=11277)[0m     "type": "default"
+[36m(WorkerDict pid=11277)[0m   },
+[36m(WorkerDict pid=11277)[0m   "rope_theta": 1000000.0,
+[36m(WorkerDict pid=11277)[0m   "sliding_window": 32768,
+[36m(WorkerDict pid=11277)[0m   "tie_word_embeddings": false,
+[36m(WorkerDict pid=11277)[0m   "torch_dtype": "bfloat16",
+[36m(WorkerDict pid=11277)[0m   "transformers_version": "4.51.0",
+[36m(WorkerDict pid=11277)[0m   "use_cache": true,
+[36m(WorkerDict pid=11277)[0m   "use_sliding_window": false,
+[36m(WorkerDict pid=11277)[0m   "video_token_id": 151656,
+[36m(WorkerDict pid=11277)[0m   "vision_config": {
+[36m(WorkerDict pid=11277)[0m     "depth": 32,
+[36m(WorkerDict pid=11277)[0m     "fullatt_block_indexes": [
+[36m(WorkerDict pid=11277)[0m       7,
+[36m(WorkerDict pid=11277)[0m       15,
+[36m(WorkerDict pid=11277)[0m       23,
+[36m(WorkerDict pid=11277)[0m       31
+[36m(WorkerDict pid=11277)[0m     ],
+[36m(WorkerDict pid=11277)[0m     "hidden_act": "silu",
+[36m(WorkerDict pid=11277)[0m     "hidden_size": 1280,
+[36m(WorkerDict pid=11277)[0m     "in_channels": 3,
+[36m(WorkerDict pid=11277)[0m     "in_chans": 3,
+[36m(WorkerDict pid=11277)[0m     "intermediate_size": 3420,
+[36m(WorkerDict pid=11277)[0m     "model_type": "qwen2_5_vl",
+[36m(WorkerDict pid=11277)[0m     "num_heads": 16,
+[36m(WorkerDict pid=11277)[0m     "out_hidden_size": 3584,
+[36m(WorkerDict pid=11277)[0m     "patch_size": 14,
+[36m(WorkerDict pid=11277)[0m     "spatial_merge_size": 2,
+[36m(WorkerDict pid=11277)[0m     "spatial_patch_size": 14,
+[36m(WorkerDict pid=11277)[0m     "temporal_patch_size": 2,
+[36m(WorkerDict pid=11277)[0m     "tokens_per_second": 2,
+[36m(WorkerDict pid=11277)[0m     "window_size": 112
+[36m(WorkerDict pid=11277)[0m   },
+[36m(WorkerDict pid=11277)[0m   "vision_end_token_id": 151653,
+[36m(WorkerDict pid=11277)[0m   "vision_start_token_id": 151652,
+[36m(WorkerDict pid=11277)[0m   "vision_token_id": 151654,
+[36m(WorkerDict pid=11277)[0m   "vocab_size": 152064
+[36m(WorkerDict pid=11277)[0m }
+[36m(WorkerDict pid=11277)[0m 
+[36m(WorkerDict pid=11666)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=11666)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:00,  8.76it/s]
+[36m(WorkerDict pid=11666)[0m Loading checkpoint shards:  40%|████      | 2/5 [00:00<00:00,  9.23it/s]
+[36m(WorkerDict pid=11277)[0m Monkey patch FlashAttention2.forward in Qwen2VL
+[36m(WorkerDict pid=11277)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 20.38it/s]
+[36m(WorkerDict pid=11277)[0m [rank0]:[W129 10:35:52.599636816 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[36m(WorkerDict pid=11277)[0m NCCL version 2.21.5+cuda12.4
+[36m(WorkerDict pid=11277)[0m Qwen2_5_VLForConditionalGeneration contains 8.29B parameters
+[36m(WorkerDict pid=11277)[0m wrap_policy: functools.partial(<function _or_policy at 0x7f4ca8fe0670>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0x7f4ca8fe0550>, transformer_layer_cls={<class 'transformers.models.qwen2_5_vl.modeling_qwen2_5_vl.Qwen2_5_VLDecoderLayer'>, <class 'transformers.models.qwen2_5_vl.modeling_qwen2_5_vl.Qwen2_5_VLVisionBlock'>})])
+[36m(WorkerDict pid=11277)[0m Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[36m(bundle_reservation_check_func pid=10957)[0m [2026-01-29 10:35:58,233 E 10957 11177] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(WorkerDict pid=11277)[0m You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+[36m(WorkerDict pid=11277)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=11666)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:00<00:00,  8.89it/s][32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=11666)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 11.58it/s]
+[36m(WorkerDict pid=11666)[0m [rank1]:[W129 10:35:52.783781665 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 1]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[36m(WorkerDict pid=11277)[0m [2026-01-29 10:35:59,516 E 11277 11341] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(WorkerGroupRegisterCenter pid=11517)[0m [2026-01-29 10:36:05,308 E 11517 11571] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(WorkerDict pid=11666)[0m [2026-01-29 10:36:06,490 E 11666 11717] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(WorkerDict pid=11277)[0m Actor use_remove_padding=True
+[36m(WorkerDict pid=11666)[0m Monkey patch FlashAttention2.forward in Qwen2VL
+[36m(WorkerDict pid=11666)[0m wrap_policy: functools.partial(<function _or_policy at 0x7f9466ee8670>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0x7f9466ee8550>, transformer_layer_cls={<class 'transformers.models.qwen2_5_vl.modeling_qwen2_5_vl.Qwen2_5_VLVisionBlock'>, <class 'transformers.models.qwen2_5_vl.modeling_qwen2_5_vl.Qwen2_5_VLDecoderLayer'>})])
+[36m(WorkerDict pid=11666)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VLForConditionalGeneration is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=11666)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=11277)[0m Model config after override: Qwen2_5_VLConfig {
+[36m(WorkerDict pid=11277)[0m   "architectures": [
+[36m(WorkerDict pid=11277)[0m     "Qwen2_5_VLForConditionalGeneration"
+[36m(WorkerDict pid=11277)[0m   ],
+[36m(WorkerDict pid=11277)[0m   "attention_dropout": 0.0,
+[36m(WorkerDict pid=11277)[0m   "eos_token_id": 151645,
+[36m(WorkerDict pid=11277)[0m   "hidden_act": "silu",
+[36m(WorkerDict pid=11277)[0m   "hidden_size": 3584,
+[36m(WorkerDict pid=11277)[0m   "image_token_id": 151655,
+[36m(WorkerDict pid=11277)[0m   "initializer_range": 0.02,
+[36m(WorkerDict pid=11277)[0m   "intermediate_size": 18944,
+[36m(WorkerDict pid=11277)[0m   "max_position_embeddings": 128000,
+[36m(WorkerDict pid=11277)[0m   "max_window_layers": 28,
+[36m(WorkerDict pid=11277)[0m   "model_type": "qwen2_5_vl",
+[36m(WorkerDict pid=11277)[0m   "num_attention_heads": 28,
+[36m(WorkerDict pid=11277)[0m   "num_hidden_layers": 28,
+[36m(WorkerDict pid=11277)[0m   "num_key_value_heads": 4,
+[36m(WorkerDict pid=11277)[0m   "pad_token_id": 151643,
+[36m(WorkerDict pid=11277)[0m   "rms_norm_eps": 1e-06,
+[36m(WorkerDict pid=11277)[0m   "rope_scaling": {
+[36m(WorkerDict pid=11277)[0m     "mrope_section": [
+[36m(WorkerDict pid=11277)[0m       16,
+[36m(WorkerDict pid=11277)[0m       24,
+[36m(WorkerDict pid=11277)[0m       24
+[36m(WorkerDict pid=11277)[0m     ],
+[36m(WorkerDict pid=11277)[0m     "rope_type": "default",
+[36m(WorkerDict pid=11277)[0m     "type": "default"
+[36m(WorkerDict pid=11277)[0m   },
+[36m(WorkerDict pid=11277)[0m   "rope_theta": 1000000.0,
+[36m(WorkerDict pid=11277)[0m   "sliding_window": 32768,
+[36m(WorkerDict pid=11277)[0m   "tie_word_embeddings": false,
+[36m(WorkerDict pid=11277)[0m   "torch_dtype": "bfloat16",
+[36m(WorkerDict pid=11277)[0m   "transformers_version": "4.51.0",
+[36m(WorkerDict pid=11277)[0m   "use_cache": true,
+[36m(WorkerDict pid=11277)[0m   "use_sliding_window": false,
+[36m(WorkerDict pid=11277)[0m   "video_token_id": 151656,
+[36m(WorkerDict pid=11277)[0m   "vision_config": {
+[36m(WorkerDict pid=11277)[0m     "depth": 32,
+[36m(WorkerDict pid=11277)[0m     "fullatt_block_indexes": [
+[36m(WorkerDict pid=11277)[0m       7,
+[36m(WorkerDict pid=11277)[0m       15,
+[36m(WorkerDict pid=11277)[0m       23,
+[36m(WorkerDict pid=11277)[0m       31
+[36m(WorkerDict pid=11277)[0m     ],
+[36m(WorkerDict pid=11277)[0m     "hidden_act": "silu",
+[36m(WorkerDict pid=11277)[0m     "hidden_size": 1280,
+[36m(WorkerDict pid=11277)[0m     "in_channels": 3,
+[36m(WorkerDict pid=11277)[0m     "in_chans": 3,
+[36m(WorkerDict pid=11277)[0m     "intermediate_size": 3420,
+[36m(WorkerDict pid=11277)[0m     "model_type": "qwen2_5_vl",
+[36m(WorkerDict pid=11277)[0m     "num_heads": 16,
+[36m(WorkerDict pid=11277)[0m     "out_hidden_size": 3584,
+[36m(WorkerDict pid=11277)[0m     "patch_size": 14,
+[36m(WorkerDict pid=11277)[0m     "spatial_merge_size": 2,
+[36m(WorkerDict pid=11277)[0m     "spatial_patch_size": 14,
+[36m(WorkerDict pid=11277)[0m     "temporal_patch_size": 2,
+[36m(WorkerDict pid=11277)[0m     "tokens_per_second": 2,
+[36m(WorkerDict pid=11277)[0m     "window_size": 112
+[36m(WorkerDict pid=11277)[0m   },
+[36m(WorkerDict pid=11277)[0m   "vision_end_token_id": 151653,
+[36m(WorkerDict pid=11277)[0m   "vision_start_token_id": 151652,
+[36m(WorkerDict pid=11277)[0m   "vision_token_id": 151654,
+[36m(WorkerDict pid=11277)[0m   "vocab_size": 152064
+[36m(WorkerDict pid=11277)[0m }
+[36m(WorkerDict pid=11277)[0m 
+[36m(WorkerDict pid=11277)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=11277)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:03<00:14,  3.56s/it]
+[36m(WorkerDict pid=11277)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2_5_VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=11666)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=11277)[0m Monkey patch FlashAttention2.forward in Qwen2VL
+[36m(WorkerDict pid=11666)[0m Actor use_remove_padding=True
+[36m(WorkerDict pid=11277)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:08<00:00,  1.27s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:08<00:00,  1.70s/it]
+[36m(WorkerDict pid=11666)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:09<00:01,  1.99s/it][32m [repeated 7x across cluster][0m
+[36m(WorkerDict pid=11277)[0m Qwen2_5_VLForConditionalGeneration contains 8.29B parameters
+[36m(WorkerDict pid=11277)[0m wrap_policy: functools.partial(<function _or_policy at 0x7f4ca8fe0670>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0x7f4ca8fe0550>, transformer_layer_cls={<class 'transformers.models.qwen2_5_vl.modeling_qwen2_5_vl.Qwen2_5_VLDecoderLayer'>, <class 'transformers.models.qwen2_5_vl.modeling_qwen2_5_vl.Qwen2_5_VLVisionBlock'>})])
+[36m(WorkerDict pid=11666)[0m Total steps: 1613, num_warmup_steps: 0
+[36m(WorkerDict pid=11666)[0m Actor use_remove_padding=True
+[36m(WorkerDict pid=11666)[0m Monkey patch FlashAttention2.forward in Qwen2VL
+[36m(WorkerDict pid=11666)[0m wrap_policy: functools.partial(<function _or_policy at 0x7f9466ee8670>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0x7f9466ee8550>, transformer_layer_cls={<class 'transformers.models.qwen2_5_vl.modeling_qwen2_5_vl.Qwen2_5_VLVisionBlock'>, <class 'transformers.models.qwen2_5_vl.modeling_qwen2_5_vl.Qwen2_5_VLDecoderLayer'>})])
+[36m(WorkerDict pid=11666)[0m WARNING 01-29 10:36:35 [utils.py:2413] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f92464ae350>
+[36m(WorkerDict pid=11277)[0m Total steps: 1613, num_warmup_steps: 0
+[36m(WorkerDict pid=11277)[0m Actor use_remove_padding=True
+[36m(WorkerDict pid=11277)[0m WARNING 01-29 10:36:37 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[36m(WorkerDict pid=11666)[0m kwargs: {'n': 10, 'logprobs': 0, 'max_tokens': 4096, 'detokenize': False, 'temperature': 1.0, 'top_k': -1, 'top_p': 1, 'ignore_eos': False}
+[36m(WorkerDict pid=11277)[0m WARNING 01-29 10:36:36 [utils.py:2413] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f4a63291cc0>
+[36m(WorkerDict pid=11666)[0m WARNING 01-29 10:36:37 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[36m(WorkerDict pid=11666)[0m /home/work/austin/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:690: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=11666)[0m   warnings.warn(
+[36m(WorkerDict pid=11666)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:09<00:00,  1.36s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:09<00:00,  1.86s/it]
+[36m(TaskRunner pid=10442)[0m wandb: Tracking run with wandb version 0.21.3
+[36m(TaskRunner pid=10442)[0m wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+[36m(TaskRunner pid=10442)[0m wandb: Run data is saved locally in /home/work/austin/MedCCO/verl/wandb/offline-run-20260129_103733-inb1vsk7
+[36m(TaskRunner pid=10442)[0m Training Progress:   0%|          | 0/1613 [00:00<?, ?it/s]
+[36m(TaskRunner pid=10442)[0m Using LocalLogger is deprecated. The constructor API will change 
+[36m(TaskRunner pid=10442)[0m Checkpoint tracker file does not exist: %s /home/work/austin/MedCCO/verl/checkpoints/verl_grpo_medVQA/latest_checkpointed_iteration.txt
+[36m(TaskRunner pid=10442)[0m Training from scratch
+[36m(TaskRunner pid=10442)[0m [!]start to training!!!!
+[36m(WorkerDict pid=11277)[0m Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
+[36m(WorkerDict pid=11277)[0m /home/work/austin/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:690: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=11277)[0m   warnings.warn(
+[36m(WorkerDict pid=11277)[0m Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
+[36m(WorkerDict pid=11277)[0m Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
+[36m(WorkerDict pid=11277)[0m ![prompt] system
+[36m(WorkerDict pid=11277)[0m You are a helpful assistant.
+[36m(WorkerDict pid=11277)[0m user
+[36m(WorkerDict pid=11277)[0m does lymphangiomatosis generalized show x-ray horizontal sections of ventricle showing penetrating artery distribution quite good? You are tasked with analyzing an image to generate a detailed description to help you answer the question. First, analyze the image and produce a detailed roi-focused description in <report> </report> tags. Next, engage in an internal dialogue and include self-reflection or verification in your reasoning process. Provide your detailed, step-by-step reasoning based on the image and description, wrap this in <think> </think> tags. Finally, provide the answer to the question in <answer> </answer> tags. The output answer format should be as follows: <report> description here </report> <think> reasoning process here </think><answer> answer here (Do not provide any explanation)</answer>. Please strictly follow the format.
+[36m(WorkerDict pid=11277)[0m assistant
+[36m(WorkerDict pid=11277)[0m 
+[36m(WorkerDict pid=11277)[0m 
+[36m(WorkerDict pid=11277)[0m                     ![response] <report>
+[36m(WorkerDict pid=11277)[0m The image displays radiographic structures that appear to be circular and concentric, resembling sections of a ventricle with a network or web-like pattern in the periphery. The structures have a dark background, and the radiographic pattern is predominantly white, indicating the bone or calcified portion of the structures. The white pattern within the radius of each circle suggests penetration or distribution, which may resemble penetrating vessels in medical imaging similar to lymphatic structures. However, it should be noted that this interpretation is speculative and indicative of a resemblance rather than a definitive medical analysis.
+[36m(WorkerDict pid=11277)[0m </report>
+[36m(WorkerDict pid=11277)[0m <think>
+[36m(WorkerDict pid=11277)[0m This image does not provide definitive evidence of a lymphangiomatosis generalized condition, which is specifically a pathological condition characterized by the proliferation of lymphatic vessels and tissues. The description of the image (report) includes speculative attributions to characteristics that might be present in a cardiac MRI or CT scan in a lymphangiomatosis case due to the radiopaque nature that might resemble the distribution of vessels around ventricles. However, to confirm such conditions, a medical professional who specializes in cardiovascular or lymphatic imaging would be required.
+[36m(WorkerDict pid=11277)[0m </think>
+[36m(WorkerDict pid=11277)[0m <answer> No </answer>
+[36m(WorkerDict pid=11277)[0m 
+[36m(WorkerDict pid=11277)[0m                     ![ground_truth] no
+[36m(WorkerDict pid=11277)[0m 
+[36m(WorkerDict pid=11277)[0m                     ![score]: answer_type CLOSED total: 0.9361, 
+[36m(WorkerDict pid=11277)[0m                     open_bert: 0.0000, 
+[36m(WorkerDict pid=11277)[0m                     open_bleu: 0.0000, 
+[36m(WorkerDict pid=11277)[0m                     open_rouge: 0.0000
+[36m(WorkerDict pid=11277)[0m                     report_generation: 0.6806
+[36m(WorkerDict pid=11277)[0m                     [score_close_format]: close_reward: 1.0000, format_reward: 1.0000
+[36m(WorkerDict pid=11277)[0m kwargs: {'n': 10, 'logprobs': 0, 'max_tokens': 4096, 'detokenize': False, 'temperature': 1.0, 'top_k': -1, 'top_p': 1, 'ignore_eos': False}
+[36m(WorkerDict pid=11666)[0m 
+[36m(WorkerDict pid=11666)[0m 
+[36m(WorkerDict pid=11666)[0m                     ![response] <report> The image depicts a series of three sections that appear to be under a microscope or in an imaging technique that highlights the internal structure of what could be tissues or cells. The lighter areas are distributed in a web-like or vascular pattern, indicative of a permeating infection, blocking, or possibly angiogenic activity. The dark background contrasts with the lighter areas, making the structures stand out more vividly. The structures are clearly visible against the deep blue or black backdrop, suggesting they are sections from within a larger entity.
+[36m(WorkerDict pid=11666)[0m 
+[36m(WorkerDict pid=11666)[0m <think> The image's resemblance to the ventricle wall with visible penetrating arteries in a radiological setting seems abstract and not definitive for a lymphangiomatosis condition, especially generalized, as it does not display blood vessels or ventricular anatomy appropriately labeled or contextually shown. The "penetrating artery distribution" inference might be confused with the vascular characteristics often associated with lymphatic structures in cases like lymphangiomatosis. However, confirming this interpretation would require a comparison with a known anatomical reference or clinical radiography.
+[36m(WorkerDict pid=11666)[0m 
+[36m(WorkerDict pid=11666)[0m Given these points, the image does show an evocative web-like vascular pattern, but it is not definitively as the x-ray horizontal sections of ventricles. The analysis is more suggestive than definitive, especially without anatomical or clinic-case cross-reference.
+[36m(WorkerDict pid=11666)[0m 
+[36m(WorkerDict pid=11666)[0m 
+[36m(WorkerDict pid=11666)[0m 
+Error executing job with overrides: ['algorithm.adv_estimator=grpo', 'data.train_files=/home/work/austin/MedCCO/preprocess/verl_parquet/train_medreport_wqa.parquet', 'data.val_files=/home/work/austin/MedCCO/preprocess/verl_parquet/train_medreport_wqa.parquet', 'data.train_batch_size=16', 'data.max_prompt_length=4096', 'data.max_response_length=4096', 'data.filter_overlong_prompts=True', 'data.truncation=error', 'data.image_key=images', 'reward_model.custom_rm=True', 'reward_model.reward_manager=None', 'actor_rollout_ref.model.path=/home/work/austin/MedCCO/llms/Qwen2.5-VL-7B-Instruct', 'actor_rollout_ref.actor.optim.lr=1e-6', 'actor_rollout_ref.model.use_remove_padding=True', 'actor_rollout_ref.actor.ppo_mini_batch_size=16', 'actor_rollout_ref.actor.ppo_micro_batch_size_per_gpu=10', 'actor_rollout_ref.actor.use_kl_loss=True', 'actor_rollout_ref.actor.kl_loss_coef=0.01', 'actor_rollout_ref.actor.kl_loss_type=low_var_kl', 'actor_rollout_ref.actor.entropy_coeff=0', 'actor_rollout_ref.model.enable_gradient_checkpointing=True', 'actor_rollout_ref.actor.fsdp_config.param_offload=False', 'actor_rollout_ref.actor.fsdp_config.optimizer_offload=False', 'actor_rollout_ref.rollout.log_prob_micro_batch_size_per_gpu=20', 'actor_rollout_ref.rollout.tensor_model_parallel_size=1', 'actor_rollout_ref.rollout.name=vllm', 'actor_rollout_ref.rollout.gpu_memory_utilization=0.8', 'actor_rollout_ref.rollout.enable_chunked_prefill=False', 'actor_rollout_ref.rollout.enforce_eager=False', 'actor_rollout_ref.rollout.free_cache_engine=False', 'actor_rollout_ref.rollout.n=10', 'actor_rollout_ref.ref.log_prob_micro_batch_size_per_gpu=20', 'actor_rollout_ref.ref.fsdp_config.param_offload=True', 'algorithm.use_kl_in_reward=False', 'trainer.critic_warmup=0', 'trainer.logger=[console,wandb]', 'trainer.project_name=verl_grpo_medVQA', 'trainer.experiment_name=', 'trainer.n_gpus_per_node=2', 'trainer.nnodes=1', 'trainer.save_freq=100', 'trainer.test_freq=-1', 'trainer.total_epochs=1']
+Traceback (most recent call last):
+  File "/home/work/austin/MedCCO/verl/verl/trainer/main_ppo.py", line 66, in main
+    run_ppo(config)
+  File "/home/work/austin/MedCCO/verl/verl/trainer/main_ppo.py", line 87, in run_ppo
+    ray.get(runner.run.remote(config))
+  File "/home/work/austin/myenv/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/home/work/austin/myenv/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+  File "/home/work/austin/myenv/lib/python3.10/site-packages/ray/_private/worker.py", line 2972, in get
+    values, debugger_breakpoint = worker.get_objects(
+  File "/home/work/austin/myenv/lib/python3.10/site-packages/ray/_private/worker.py", line 1031, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::TaskRunner.run()[39m (pid=10442, ip=172.16.0.2, actor_id=55d6f8a7c96ebd5e10d66b6b01000000, repr=<main_ppo.TaskRunner object at 0x7f901dfde140>)
+  File "/home/work/austin/MedCCO/verl/verl/trainer/main_ppo.py", line 198, in run
+    trainer.fit()
+  File "/home/work/austin/MedCCO/verl/verl/trainer/ppo/ray_trainer.py", line 1016, in fit
+    ref_log_prob = self.ref_policy_wg.compute_ref_log_prob(batch)
+  File "/home/work/austin/MedCCO/verl/verl/single_controller/ray/base.py", line 47, in func
+    output = ray.get(output)
+ray.exceptions.OutOfMemoryError: Task was killed due to the node running low on memory.
+Memory on the node (IP: 172.16.0.2, ID: eb47665a3675cc2ef90d56336301cba3374e97c22e0812c6d95ae4d8) where the lease (lease ID: 030000002193f57955ba43797a18a4a1247b3fd30e20294afb5f0b280fd6c970, name=MdNPUrWorkerDict_0:1:WorkerDict.__init__, pid=11666, memory used=58.38GB) was running was 124.52GB / 128.00GB (0.972839), which exceeds the memory usage threshold of 0.95. Ray killed this worker (ID: ee95e457785b6ebb95e6927d04b2c14fe2edefc6d240444aa21d5db1) because it was the most recently scheduled task; to see more information about memory usage on this node, use `ray logs raylet.out -ip 172.16.0.2`. To see the logs of the worker, use `ray logs worker-ee95e457785b6ebb95e6927d04b2c14fe2edefc6d240444aa21d5db1*out -ip 172.16.0.2. Top 10 memory users:
+PID	MEM(GB)	COMMAND
+11277	59.09	ray::WorkerDict.ref_compute_ref_log_prob
+11666	58.38	ray::WorkerDict.ref_compute_ref_log_prob
+8864	1.34	/home/work/austin/myenv/lib/python3.10/site-packages/ray/core/src/ray/gcs/gcs_server --log_dir=/tmp/...
+9464	0.42	python3 -m verl.trainer.main_ppo algorithm.adv_estimator=grpo data.train_files=/home/work/austin/Med...
+10442	0.42	ray::TaskRunner.run
+395	0.16	/usr/local/lib/code-server-4.93.1/lib/node /usr/local/lib/code-server-4.93.1/lib/vscode/out/bootstra...
+13189	0.13	ray::TaskRunner.run
+388	0.13	/usr/local/lib/code-server-4.93.1/lib/node --dns-result-order=ipv4first /usr/local/lib/code-server-4...
+13199	0.12	ray::TaskRunner.run
+13190	0.12	ray::TaskRunner.run
+Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-core/scheduling/ray-oom-prevention.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. Set max_restarts and max_task_retries to enable retry when the task crashes due to OOM. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero.
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+[36m(WorkerDict pid=11666)[0m ![prompt] system
+[36m(WorkerDict pid=11666)[0m You are a helpful assistant.
+[36m(WorkerDict pid=11666)[0m user
+[36m(WorkerDict pid=11666)[0m does lymphangiomatosis generalized show x-ray horizontal sections of ventricle showing penetrating artery distribution quite good? You are tasked with analyzing an image to generate a detailed description to help you answer the question. First, analyze the image and produce a detailed roi-focused description in <report> </report> tags. Next, engage in an internal dialogue and include self-reflection or verification in your reasoning process. Provide your detailed, step-by-step reasoning based on the image and description, wrap this in <think> </think> tags. Finally, provide the answer to the question in <answer> </answer> tags. The output answer format should be as follows: <report> description here </report> <think> reasoning process here </think><answer> answer here (Do not provide any explanation)</answer>. Please strictly follow the format.
+[36m(WorkerDict pid=11666)[0m assistant
+[36m(WorkerDict pid=11666)[0m </think>
+[36m(WorkerDict pid=11666)[0m <answer> No </answer>
+[36m(WorkerDict pid=11666)[0m                     ![ground_truth] no
+[36m(WorkerDict pid=11666)[0m                     ![score]: answer_type CLOSED total: 0.6674, 
+[36m(WorkerDict pid=11666)[0m                     open_bert: 0.0000, 
+[36m(WorkerDict pid=11666)[0m                     open_bleu: 0.0000, 
+[36m(WorkerDict pid=11666)[0m                     open_rouge: 0.0000
+[36m(WorkerDict pid=11666)[0m                     report_generation: -0.1631
+[36m(WorkerDict pid=11666)[0m                     [score_close_format]: close_reward: 1.0000, format_reward: 0.0000
+[36m(WorkerDict pid=11666)[0m Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
